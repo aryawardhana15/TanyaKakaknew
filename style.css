@@ -87,7 +87,7 @@ address {
 }
 
 ::-webkit-scrollbar-track {
-  background: #013d40; /* Ubah ini ke warna background Anda */
+  background: #71c8e0; /* Ubah ini ke warna background Anda */
   border-radius: 10px; /* Membuat track melengkung */
  
 }
@@ -95,7 +95,7 @@ address {
 ::-webkit-scrollbar-thumb {
   background: #fff; /* Ubah ini ke warna thumb Anda */
   border-radius: 10px; /* Membuat thumb melengkung */
-  background-color: rgb(13, 117, 77);
+  background-color: rgb(39, 100, 138);
 }
 
 .container { padding-inline :15px; } /* Ini untuk mengatur lebar container kiri kanannnya karna itu inline*/
@@ -224,7 +224,7 @@ body {
   align-items: center;
   padding: 1.4rem 7%;
   margin:0;
-  background: rgb(31, 95, 60); /* Menggunakan warna solid */
+  background: rgb(21, 88, 113); /* Menggunakan warna solid */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   position: fixed;
@@ -232,7 +232,7 @@ body {
   left: 0;
   right: 0;
   z-index: 9999;
-  border: 1px solid rgba(20, 158, 55, 0.5); /* Border solid tanpa transparansi */
+  border: 1px solid rgba(70, 180, 216, 0.5); /* Border solid tanpa transparansi */
   border-radius-top: 100px ; /* Pastikan hanya sudut atas yang melengkung */
 
 }
@@ -254,14 +254,14 @@ body {
 }
 
 .navbar .navbar-nav a:hover {
-  color: var(--accent);
+  color:rgb(89, 141, 215);
 }
   
   .navbar .navbar-nav a::after {
     content: '';
     display: block;
     padding-bottom: 0.5rem;
-    border-bottom: 0.1rem solid var(--accent);
+    border-bottom: 0.1rem solid rgb(89, 141, 215);
     transform: scaleX(0);
     transition: 0.2s linear;
   }
@@ -276,7 +276,7 @@ body {
   }
   
   .navbar .navbar-extra a:hover {
-    color: var(--primary);
+    color: rgb(89, 141, 215);
   }
   
   #hamburger-menu {

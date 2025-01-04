@@ -33,7 +33,6 @@ itemDetailButtons.forEach((btn) => {
   };
 });
 
-
 // klik tombol close modal
 document.querySelector('.modal .close-icon').onclick = (e) => {
     itemDetailModal.style.display = 'none';
