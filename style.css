@@ -1,6 +1,6 @@
 
 :root {
-  --primary: #0F9D58; /* Warna utama */
+  --primary: #0f7c9d; /* Warna utama */
   --bg: #F9F9F9; /* Warna latar belakang */
   --text: #202124; /* Warna teks utama */
   --accent: #34A853; /* Warna aksen */
@@ -216,15 +216,14 @@ body {
   overflow-x: hidden;
 
 }
-
-/* Contoh komponen dengan penggunaan warna */
+/* Navbar dengan hijau gelap modern */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.4rem 7%;
-  margin:0;
-  background: rgb(21, 88, 113); /* Menggunakan warna solid */
+  margin: 0;
+  background: rgb(25, 60, 40); /* Hijau gelap modern */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   position: fixed;
@@ -232,11 +231,9 @@ body {
   left: 0;
   right: 0;
   z-index: 9999;
-  border: 1px solid rgba(70, 180, 216, 0.5); /* Border solid tanpa transparansi */
-  border-radius-top: 100px ; /* Pastikan hanya sudut atas yang melengkung */
-
+  border: 1px solid rgba(40, 90, 60, 0.5); /* Border hijau gelap transparan */
+  border-radius-top: 100px; /* Pastikan hanya sudut atas yang melengkung */
 }
-
 
 .navbar .navbar-logo {
   font-size: 2rem;
@@ -247,57 +244,56 @@ body {
 
 .navbar .navbar-nav a {
   display: inline-block;
-  color: #fff;
+  color: #ffffff; /* Warna teks putih */
   font-size: 1.3rem;
   margin: 0 1rem;
-  padding: 0.5rem ;
+  padding: 0.5rem;
 }
 
 .navbar .navbar-nav a:hover {
-  color:rgb(89, 141, 215);
+  color: rgb(100, 160, 120); /* Hijau lembut */
 }
-  
-  .navbar .navbar-nav a::after {
-    content: '';
-    display: block;
-    padding-bottom: 0.5rem;
-    border-bottom: 0.1rem solid rgb(89, 141, 215);
-    transform: scaleX(0);
-    transition: 0.2s linear;
-  }
-  
-  .navbar .navbar-nav a:hover::after {
-    transform: scaleX(1);
-  }
-  
-  .navbar .navbar-extra a {
-    color: #fff;
-    margin: 0 0.5rem;
-  }
-  
-  .navbar .navbar-extra a:hover {
-    color: rgb(89, 141, 215);
-  }
-  
-  #hamburger-menu {
-    display: none; 
-  }
-  
-  
-  .navbar .search-form {
-    position: absolute;
-    top: 100%;
-    right: 7%;
-    background-color: #fff;
-    width: 50rem;
-    height: 5rem;
-    display: flex;
-    align-items: center;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: 0.3s;
-  }
-  
+
+.navbar .navbar-nav a::after {
+  content: '';
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid rgb(100, 160, 120); /* Border hijau lembut */
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar .navbar-extra a {
+  color: #ffffff; /* Warna teks putih */
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: rgb(100, 160, 120); /* Hijau lembut */
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.navbar .search-form {
+  position: absolute;
+  top: 100%;
+  right: 7%;
+  background-color: #ffffff; /* Background putih */
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+}
+
   .navbar .search-form.active {
     transform: scaleY(1);
   }
@@ -427,7 +423,7 @@ body {
     font-size: 1.6rem;
     margin-top: 1rem;
     line-height: 1.4;
-    color: #fe6a01;
+    color: #ffffff;
     font-weight: 1000;
     text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
     mix-blend-mode: difference;
@@ -474,7 +470,6 @@ body {
   .contact h2 span {
     color: green;
   }
-
   .about {
     padding-block: var(--section-padding);
     background-color: #eaf8f0;
@@ -605,6 +600,7 @@ body {
   .about .btn:hover {
     background: linear-gradient(135deg, #43a047, #2e7d32);
   }
+  
   
 
 
