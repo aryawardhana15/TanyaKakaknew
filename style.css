@@ -1747,8 +1747,9 @@ justify-content: center;
 
   .gallery-list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 2fr);
     gap: 15px;
+    display: flex;
   }
 
 
@@ -1924,14 +1925,50 @@ justify-content: center;
 
 
 
+
+
 .gallery-card {
   height: 430px;
+  width: 240px;
+  display: flex; /* Memastikan elemen diatur dengan baik */
+  flex-direction: column; /* Susunan elemen secara vertikal */
+  align-items: center;
   padding: 20px;
-  padding-block-start: 50px;
+  padding-top: 50px;
   z-index: -10;
-  background-size: cover;  /* Ensure background covers the space */
-  background-position: center;  /* Keep background image centered */
-  
+  background-size: cover;  /* Background menutupi seluruh area */
+  background-position: center;  /* Background tetap di tengah */
+  border-radius: 10px; /* Opsional, agar sudut lebih lembut */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Opsional, untuk efek elegan */
+}
+
+@media (max-width: 768px) {
+  .gallery-card {
+    height: 550px; /* Kurangi tinggi untuk tablet */
+    width: auto;  /* Sesuaikan lebar untuk tablet */
+    padding: 15px; /* Kurangi padding */
+
+    .card-content .h3 {
+      font-size: 2.6rem;
+      align-items: center;
+      text-align: center;
+      margin-top: 250px;
+    }
+
+    .btn-link {
+      font-size: medium;
+      margin-right: 600px;
+    }
+  }
+}
+
+/* Responsif untuk ponsel */
+@media (max-width: 480px) {
+  .gallery-card {
+    height: 300px; /* Lebih pendek untuk ponsel */
+    width: auto;  /* Lebih sempit untuk ponsel */
+    padding: 10px; /* Sesuaikan padding untuk layar kecil */
+  }
 }
 
 .gallery-card img {
@@ -1977,6 +2014,17 @@ justify-content: center;
 .btn-link:is(:hover, :focus-visible) {
   color: var(--french-bistre);
 }
+
+.card-content .h3 {
+  text-align: center;
+  justify-items: center;
+  margin-top: 130px;
+  font-size: large;
+  font-weight: bolder;
+  color: var(--white);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Bayangan hitam */
+}
+
 
 #galleryh2 {
   text-align: center;
