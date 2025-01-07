@@ -1965,11 +1965,32 @@ justify-content: center;
 /* Responsif untuk ponsel */
 @media (max-width: 480px) {
   .gallery-card {
-    height: 300px; /* Lebih pendek untuk ponsel */
-    width: auto;  /* Lebih sempit untuk ponsel */
-    padding: 10px; /* Sesuaikan padding untuk layar kecil */
+    height: auto; /* Tinggi penuh untuk ponsel */
+    width: auto; /* Lebar penuh untuk ponsel */
+    padding: 10px; /* Kurangi padding */
+  }
+
+  .gallery-card .card-content .h3 {
+    font-size: 2rem; /* Sesuaikan ukuran font */
+    margin-top: 150px; /* Kurangi margin atas */
+  }
+
+  .gallery-card .btn-link {
+    font-size: small; /* Ukuran font lebih kecil */
+    margin: 0; /* Hilangkan margin */
+    padding: 0; /* Hilangkan padding tambahan */
+    text-align: left; /* Rapi di kiri */
+    display: block; /* Pastikan elemen menempati baris penuh */
+  }
+
+
+
+  /* Pastikan pembungkusnya juga sejajar kiri */
+  .gallery-card .card-content {
+    text-align: left; /* Atur semua konten di sisi kiri */
   }
 }
+
 
 .gallery-card img {
   width: 100%;
