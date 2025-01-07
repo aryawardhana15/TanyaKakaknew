@@ -1978,10 +1978,11 @@ justify-content: center;
   .gallery-card .btn-link {
     font-size: small; /* Ukuran font lebih kecil */
     margin: 0; /* Hilangkan margin */
-    padding: 0; /* Hilangkan padding tambahan */
-    text-align: left; /* Rapi di kiri */
-    display: block; /* Pastikan elemen menempati baris penuh */
+    padding: 0px; /* Hilangkan padding tambahan */
   }
+
+
+
 
 
 
