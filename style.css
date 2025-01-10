@@ -1909,20 +1909,17 @@ justify-content: center;
 
 
    /* galeri */
-   .gallery-list {
-    grid-template-columns: 4;  /* 2 columns on laptops */
+   /* .gallery-list {
+    grid-template-columns: 4;   */
     
   }
-}
+
 
 /* Style for the gallery card */
 
 .gallery {
   background-color: #eaf8f0;  
 }
-
-
-
 
 
 .gallery-card {
@@ -1943,9 +1940,12 @@ justify-content: center;
 
 
 /* Media query untuk tablet */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media  (max-width: 1024px) {
   .gallery-list {
-    grid-template-columns: repeat(5, 1fr); /* Dua kolom di tablet */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    
   }
 
   
@@ -1953,7 +1953,9 @@ justify-content: center;
   .gallery-card {
     height: 400px; /* Sedikit lebih kecil untuk menyesuaikan layar */
     padding: 15px; /* Kurangi padding */
-    width: 768px;
+    width: auto;
+    grid-template-columns: 1fr; /* Satu kolom */
+
   }
 
   .gallery-card .card-content .h3 {
@@ -1979,6 +1981,8 @@ justify-content: center;
     font-size: small; /* Ukuran font lebih kecil */
     margin: 0; /* Hilangkan margin */
     padding: 0px; /* Hilangkan padding tambahan */
+    padding-left: 0px;
+    margin-right: 250px;
   }
 
 
@@ -2021,7 +2025,11 @@ justify-content: center;
   height: 100%;
 }
 
+
 .gallery-card .card-title {
+  font-size: var(--fs-4);
+  font-weight: var(--fw-bold);
+
   color: var(--white);
 }
 
@@ -2031,6 +2039,7 @@ justify-content: center;
   align-items: center;
   gap: 8px;
   transition: var(--transition-1);
+
 }
 
 .btn-link:is(:hover, :focus-visible) {
@@ -2039,6 +2048,11 @@ justify-content: center;
 
 .card-content .h3 {
   text-align: center;
+  padding-left: 10px;
+  align-items: center;
+  margin-left:auto;
+  margin-right: auto;
+  padding-right: 10px;
   justify-items: center;
   margin-top: 130px;
   font-size: large;
