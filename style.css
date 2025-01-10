@@ -1918,9 +1918,7 @@ justify-content: center;
 /* Style for the gallery card */
 
 .gallery {
-  background-color: #eaf8f0;
-
-  
+  background-color: #eaf8f0;  
 }
 
 
@@ -1928,6 +1926,7 @@ justify-content: center;
 
 
 .gallery-card {
+  background-color: #007bff;
   height: 430px;
   width: 240px;
   display: flex; /* Memastikan elemen diatur dengan baik */
@@ -1942,23 +1941,24 @@ justify-content: center;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Opsional, untuk efek elegan */
 }
 
-@media (max-width: 768px) {
+
+/* Media query untuk tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .gallery-list {
+    grid-template-columns: repeat(5, 1fr); /* Dua kolom di tablet */
+  }
+
+  
+
   .gallery-card {
-    height: 550px; /* Kurangi tinggi untuk tablet */
-    width: auto;  /* Sesuaikan lebar untuk tablet */
+    height: 400px; /* Sedikit lebih kecil untuk menyesuaikan layar */
     padding: 15px; /* Kurangi padding */
+    width: 768px;
+  }
 
-    .card-content .h3 {
-      font-size: 2.6rem;
-      align-items: center;
-      text-align: center;
-      margin-top: 250px;
-    }
-
-    .btn-link {
-      font-size: medium;
-      margin-right: 600px;
-    }
+  .gallery-card .card-content .h3 {
+    font-size: 3rem; /* Sesuaikan ukuran font */
+    margin-top: 150px; /* Kurangi margin atas */
   }
 }
 
@@ -2110,6 +2110,7 @@ justify-content: center;
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       gap: 15px;
+
     }
   
     .section-title {
