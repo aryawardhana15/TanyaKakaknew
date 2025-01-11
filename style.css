@@ -617,202 +617,212 @@ body {
 
 
 
-
-
-  /* Menyusun kartu secara horizontal */
-.grid-list {
-  display: flex; /* Gunakan Flexbox */
-  flex-wrap: wrap; /* Agar elemen bisa membungkus ke baris baru jika terlalu panjang */
-  gap: 20px; /* Jarak antar elemen */
-  padding: 0; /* Menghilangkan padding bawaan list */
-justify-content: center;
+/* Mentor Section */
+.mentor-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
 }
 
-.grid-list li {
-  flex: 1 1 calc(25% - 20px); /* Ukuran fleksibel dengan lebar 25% */
-  max-width: 300px; /* Batas lebar maksimal */
-
+.mentor-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  text-align: center;
 }
 
+.mentor-subtitle {
+  font-size: 1.5rem;
+  color: #6c757d;
+  margin-bottom: 10px;
+}
 
-  /* Menyusun kartu secara horizontal */
-  .grid-list1 {
-    display: flex; /* Gunakan Flexbox */
-    flex-wrap: wrap; /* Agar elemen bisa membungkus ke baris baru jika terlalu panjang */
-    gap: 20px; /* Jarak antar elemen */
-    padding: 0; /* Menghilangkan padding bawaan list */
+.mentor-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Mentor Grid */
+.mentor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+/* Mentor Item */
+.mentor-item {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mentor-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Mentor Card */
+.mentor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.mentor-banner {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* Aspect ratio 1:1 */
+  border-radius: 20%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.mentor-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Mentor Content */
+.mentor-content {
+  text-align: center;
+}
+
+.mentor-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #333;
+}
+
+.mentor-link {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.mentor-link:hover {
+  color: #007bff;
+}
+
+.mentor-job {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 15px;
+}
+
+.mentor-meta {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px;
+  display: flex;
   justify-content: center;
-  }
-  
-  .grid-list1 li {
-    flex: 1 1 calc(25% - 20px); /* Ukuran fleksibel dengan lebar 25% */
-    max-width: 300px; /* Batas lebar maksimal */
-  
-  }
-
-#mentor {
-  background-color: #f2f7f4; /* Latar belakang terang untuk keseluruhan section */
+  gap: 15px;
 }
 
-.mentor-card .card-banner {
-  border-radius: var(--radius-10);
+.mentor-meta-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #6c757d;
 }
 
-.mentor-card .card-banner  {
-  transition: var(--transition-2);
+.mentor-meta-item ion-icon {
+  margin-right: 5px;
+  font-size: 1.2rem;
 }
 
-.mentor-card .card-banner::after {
-  inset: 0;
-  background-color: var(--black_50);
-  opacity: 0;
-  transition: var(--transition-1);
+.mentor-meta-text {
+  font-size: 0.9rem;
 }
 
-.mentor-card:is(:hover, :focus-within) .card-banner  {
+.mentor-description {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Mentor Button */
+.mentor-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+.mentor-btn:hover {
+  background-color: #0056b3;
   transform: scale(1.1);
 }
 
-.mentor-card:is(:hover, :focus-within) .card-banner::after {
-  opacity: 1;
-}
-
-.mentor-card .card-content {
-  position: relative;
-  margin-inline: 15px;
-  background-color: var(--white);
-  padding: 20px;
-  border-radius: var(--radius-10);
-  box-shadow: var(--shadow-3);
-  margin-block-start: -100px;
-  z-index: 1;
-}
-
-.mentor-card .card-btn {
-  position: absolute;
-  top: -40px;
-  right: 30px;
-  background-color: var(--kappel);
-  color: var(--white);
-  font-size: 20px;
-  padding: 20px;
-  border-radius: var(--radius-circle);
-  transition: var(--transition-1);
-  opacity: 0;
-}
-
-.mentor-card .card-btn:is(:hover, :focus) {
-  background-color: var(--radical-red);
-}
-
-.mentor-card:is(:hover, :focus-within) .card-btn {
-  opacity: 1;
-  transform: translateY(10px);
-}
-
-.mentor-card .card-title {
-  margin-block: 10px 15px;
-  transition: var(--transition-1);
-}
-
-.mentor-card .card-title:is(:hover, :focus) {
-  color: var(--kappel);
-}
-
-.mentor-card .card-subtitle {
-  text-transform: uppercase;
-  font-size: var(--fs-5);
-  color: var(--kappel);
-}
-
-.mentor-card .card-text {
-  font-size: var(--fs-5);
-}
-
-.mentor-card:is(.card-meta-list, .card-meta-item) {
-  display: flex;
-}
-
-.mentor-card .card-meta-list {
-  flex-wrap: wrap;
-  gap: 10px 20px;
-  margin-block-end: 20px;
-}
-
-.mentor-card .card-meta-item {
-  gap: 10px;
-  align-items: center;
-  color: var(--eerie-black-1);
-}
-
-.mentor-card .card-meta-item ion-icon {
-  color: var(--kappel);
-  font-size: 18px;
-  --ionicon-stroke-width: 40px;
+.mentor-btn ion-icon {
+  font-size: 1.2rem;
 }
 
 
-.img-cover {
-  aspect-ratio: 16/9;
-  width: 100%;
-  object-fit: cover;
-  border-top-left-radius: 80px;
-  border-bottom-right-radius: 80px;
-}
-
-.img-cover2 {
-  aspect-ratio: 16/9;
-  width: 100%;
-  object-fit: cover;
-  border-top-right-radius: 80px;
-  border-bottom-left-radius: 80px;
-}
-
-.img-cover3 {
-  aspect-ratio: 16/9;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 20px;
-  
-}
 /* stats */
 
 .stats {
-  background: linear-gradient(135deg, #2ecc71, #16a085);
+  background: #fff;
   padding: 4rem 2rem;
   text-align: center;
-  color: white;
+  color: #333;
 }
 
 .stats h2 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
   font-weight: bold;
 }
 
 .stats span {
-  color: #fff;
+  color: #2ecc71;
   font-style: italic;
 }
 
 .stats p {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .stats-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  justify-content: center;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .stat-item {
-  background: #fff;
-  padding: 2.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
 }
 
 .stat-item:hover {
@@ -827,7 +837,7 @@ justify-content: center;
 }
 
 .stat-info h3 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #333;
   margin: 0.5rem 0;
@@ -838,96 +848,153 @@ justify-content: center;
   color: #777;
 }
 
-.stat-info {
-  padding: 1rem;
-  background-color: rgba(46, 206, 102, 0.1);
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-
-.stat-item:hover .stat-info {
-  background-color: rgba(46, 206, 102, 0.2);
-}
-
-.stat-item .stat-icon i {
-  transition: transform 0.3s ease;
-}
-
-.stat-item:hover .stat-icon i {
-  transform: rotate(360deg);
-}
-
 
 
 
 
   /* Menu Section */
  
-
-  .blog { padding-block: var(--section-padding); }
+  .blog-list {
+    display: flex;
+    flex-direction: row; /* Menyusun elemen secara horizontal */
+    gap: 20px; /* Jarak antar-card */
+    padding: 0;
+    list-style: none;
+    overflow-x: auto; /* Menambahkan scroll horizontal */
+    scrollbar-width: thin; /* Opsional, untuk memperkecil scroll */
+  }
   
-  .blog-card { 
-    background-color: #e8efeb;
-    box-shadow: var(--shadow-2); }
+  /* Mengatur tampilan scrollbar secara khusus untuk browser berbasis WebKit */
+.blog-list::-webkit-scrollbar-thumb {
+  background-color: #007bff; /* Warna tombol scrollbar */
+  border-radius: 10px;
+}
+
+.blog-list::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Warna track scrollbar */
+  height: 1000px;
+}
+
+  
+  @media screen and (max-width: 768px) {
+    .blog-list {
+      flex-direction: column; /* Mengatur elemen menjadi vertikal pada layar kecil */
+      overflow-x: visible; /* Menonaktifkan scroll horizontal pada layar kecil */
+    }
+  }
+  
+  
+  .blog-card {
+    display: block;
+    width: 300px; /* Penuhi lebar container */
+    height: 300px;
+    margin: 0 auto; /* Pusatkan jika ada margin horizontal */
+  }
+  
+  .blog {
+    padding-block: var(--section-padding);
+    background-color: #f8f9fa;
+  }
+  
+  .blog-card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
   
   .blog-card .card-banner {
     overflow: hidden;
-    aspect-ratio: 2 / 1.5;
+    aspect-ratio: 16 / 9;
+    background-color: #e9ecef;
+
   }
   
   .blog-card .card-banner img {
-    height: 100%;
+    width: 100%;
+    height: auto;
     object-fit: cover;
-    transition: 0.5s ease;
+    transition: transform 0.5s ease;
   }
   
-  .blog-card:is(:hover, :focus) .card-banner img { transform: scale(1.1); }
+  .blog-card:hover .card-banner img {
+    transform: scale(1.1);
+  }
   
-  .blog-content { padding: 30px; }
+  .blog-content {
+    padding: 20px;
+  }
   
-  .blog-card .card-meta-list {
+  .blog-content .card-meta-list {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
+    gap: 15px;
+    margin-bottom: 10px;
+    color: #6c757d;
+    font-size: 0.875rem;
   }
   
-  .blog-card :is(.card-meta-link, .publish-date) {
-    color: var(--cadet);
-    font-size: var(--fs-7);
-    font-weight: var(--fw-600);
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    transition: var(--transition);
+  .blog-content .card-meta-list ion-icon {
+    color: #007bff;
   }
-  
-  .blog-card :is(.card-meta-link, .publish-date) ion-icon { color: var(--orange-soda); }
-  
-  .blog-card .card-meta-link:is(:hover, :focus) { color: var(--orange-soda); }
   
   .blog-title {
-    font-size: 1rem;
-    --font-weight: var(--fw-600);
+    font-size: 1.125rem;
+    color: #212529;
+    font-weight: 600;
+    margin: 10px 0;
   }
   
-  .blog-card .blog-title:is(:hover, :focus) { color: var(--orange-soda); }
+  .blog-title:hover {
+    color: #007bff;
+  }
   
   .blog-content-bottom {
-    padding-top: 20px;
-    border-top: 1px solid hsla(0, 0%, 0%, 0.1);
-    margin-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-top: 1px solid #e9ecef;
+    padding-top: 10px;
+    margin-top: 10px;
   }
   
-  .blog-card .read-more-btn {
-    color: var(--orange-soda);
-    font-size: var(--fs-7);
-    font-weight: var(--fw-600);
-    text-transform: uppercase;
+  .blog-content-bottom .publish-date {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.875rem;
+    color: #6c757d;
   }
+  
+  .blog-content-bottom .read-more-btn {
+    font-size: 0.875rem;
+    color: #007bff;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+  
+  .blog-content-bottom .read-more-btn:hover {
+    color: #0056b3;
+  }
+
+  @media screen and (max-width: 768px) {
+    .blog-list {
+      flex-direction: column; /* Mengatur elemen menjadi vertikal */
+    }
+  
+    .blog-card {
+      width: 100%; /* Kartu memenuhi lebar penuh */
+    }
+  }
+  
+  
   
 /* Produk Section */
 .products {
@@ -999,7 +1066,11 @@ justify-content: center;
 
 .product-content {
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+
   text-align: center;
+  align-items: center;
 }
 
 .product-content h3 {
@@ -1025,7 +1096,7 @@ justify-content: center;
 .product-price {
   font-size: 1.4rem;
   font-weight: bold;
-  color: #333;
+  color: #5a0f0f;
   margin-top: 0.5rem;
 }
 
