@@ -222,9 +222,7 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-image: url('asset/bg\ body.png');
-  background-size: cover;
-  background-position: center;
+ 
   
  
  
@@ -1402,15 +1400,7 @@ body {
     margin-bottom: 10px;
   }
 
-  .swiper-container {
-    background-image: url('asset/back\ biru\ 2.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 1000px;
-    height: 1000px;
-    margin-top: 100px;
-  }
+
 .quotetesti {
   background-color: #15ac51;
   text-align: center;
