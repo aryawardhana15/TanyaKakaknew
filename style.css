@@ -486,7 +486,7 @@ body {
   }
   .about {
     padding-block: var(--section-padding);
-    background-color: #eaf8f0;
+    background-color: #b7d1ef;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     margin-bottom: 50px;
@@ -617,12 +617,13 @@ body {
   
   
 
+  
 
 
 /* Mentor Section */
 .mentor-section {
   padding: 50px 0;
-  background-color: #f9f9f9;
+  background-color: #ceecf2;
 }
 
 .mentor-container {
@@ -784,7 +785,7 @@ body {
 /* stats */
 
 .stats {
-  background: #fff;
+  background-color: #ceecf2;
   padding: 4rem 2rem;
   text-align: center;
   color: #333;
@@ -896,7 +897,7 @@ body {
   
   .blog {
     padding-block: var(--section-padding);
-    background-color: #f8f9fa;
+    background-color: #ceecf2;
   }
   
   .blog-card {
@@ -1006,7 +1007,7 @@ body {
   
   text-align: center;
   padding: 2rem;
-  background-color: #f8f9fa;
+  background-color: #ceecf2;
 }
 
 .products h2 {
@@ -1118,7 +1119,7 @@ body {
 
   
   .property { 
-    background-color: #eaf8f0;
+    background-color: #ceecf2;
 
     padding-block: var(--section-padding); 
   
@@ -2028,7 +2029,7 @@ body {
 /* Style for the gallery card */
 
 .gallery {
-  background-color: #eaf8f0;  
+  background-color: #ceecf2;
 }
 
 
