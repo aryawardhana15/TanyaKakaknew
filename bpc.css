@@ -208,37 +208,90 @@ section {
 }
 
 
-/* Cards Section */
-.cards {
+/* Cards Section *//* Intro Section */
+#intro {
+    background: linear-gradient(to right, #e0f7fa, #d0f8df);
+    padding: 4rem 2rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
     gap: 2rem;
-    margin-top: 3rem;
-    flex-wrap: wrap; /* For Responsive Design */
+}
+
+.intro-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: #004d40;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background: #00796b;
+    transform: scale(1.1);
+}
+
+/* Why Join Section */
+.why-join {
+    background: linear-gradient(to right, #f1f8e9, #e8f5e9);
+    padding: 6rem 2rem;
+}
+
+.why-join .description {
+    margin-bottom: 3rem;
+    color: #666;
+    font-size: 1.2rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
 }
 
 .card {
-    background-color: white;
+    background: #fff;
+    border-radius: 15px;
     padding: 2rem;
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
 
 .card-icon {
     font-size: 3rem;
     color: #004d40;
     margin-bottom: 1rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 .card-title {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: #004d40;
     margin-bottom: 1rem;
 }
@@ -247,6 +300,7 @@ section {
     font-size: 1rem;
     color: #666;
 }
+
 .how-it-works {
     background: linear-gradient(to right, #f1f8e9, #e8f5e9);
     padding: 4rem 2rem;
@@ -348,6 +402,93 @@ section {
     background: #2e7d32;
 }
 
+
+/* khusus page beasiswa */
+/* Beasiswa Section Styling */
+.beasiswa {
+    background: linear-gradient(135deg, #e1f5fe, #e0f7fa);
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.beasiswa .section-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #00796b;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.beasiswa .description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.beasiswa-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.beasiswa-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.beasiswa-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.beasiswa-card h3 {
+    font-size: 1.6rem;
+    color: #004d40;
+    margin-bottom: 1rem;
+}
+
+.beasiswa-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.beasiswa-card .apply-button {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: #004d40;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.beasiswa-card .apply-button:hover {
+    background-color: #00796b;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .beasiswa-grid {
+        grid-template-columns: 1fr;
+    }
+    .beasiswa-card {
+        padding: 1.5rem;
+    }
+    .beasiswa .description {
+        font-size: 1.1rem;
+    }
+}
+
+
 /* Responsif */
 @media (max-width: 768px) {
     .steps {
@@ -365,38 +506,206 @@ section {
 
 }
 
-/* Call To Action Section */
-.cta {
-    background-color: #004d40;
-    color: white;
-    padding: 0.3rem 0.5rem;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+/* Pricing Section Styling */
+/* Dynamic Pricing Section */
+/* Dynamic Pricing Section */
+.dynamic-pricing {
+    background: linear-gradient(135deg, #f3f9fe, #e5f9f3);
+    padding: 5rem 2rem;
     text-align: center;
-    padding-bottom: 60px;
-    padding-top: 20px;
+    overflow: hidden;
+  }
+  
+  .dynamic-pricing .section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #00796b;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+  }
+  
+  .pricing-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .pricing-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    background: linear-gradient(to bottom, #f7fff7, #e6ffed);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .icon-container {
+    background: linear-gradient(to bottom, #d0f1f9, #b3e5fc);
+    border-radius: 50%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .icon-container img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .pricing-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #004d40;
+    margin-bottom: 0.5rem;
+  }
+  
+  .pricing-description {
+    font-size: 1rem;
+    color: #616161;
+    line-height: 1.6;
+    text-align: center;
+  }
+  
+  .pricing-amount {
+    font-size: 2rem;
+    color: #2e7d32;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pricing-card::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(0, 150, 136, 0.2), transparent);
+    border-radius: 50%;
+    z-index: -1;
+  }
+  
+  .pricing-card::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(0, 176, 255, 0.2), transparent);
+    border-radius: 50%;
+    z-index: -1;
+  }
+  
+/* Call To Action Section *//* Call To Action Section */
+.cta {
+    background: linear-gradient(135deg, #00796b, #004d40);
+    color: white;
+    padding: 2rem 1rem;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta::before,
+.cta::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 0;
+    animation: move 6s infinite ease-in-out;
+}
+
+.cta::before {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    left: -50px;
+}
+
+.cta::after {
+    width: 300px;
+    height: 300px;
+    bottom: -100px;
+    right: -100px;
+}
+
+@keyframes move {
+    0%, 100% {
+        transform: translateY(0) rotate(0);
+    }
+    50% {
+        transform: translateY(-20px) rotate(10deg);
+    }
 }
 
 .cta-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
     margin-bottom: 1rem;
+    z-index: 1;
+    position: relative;
+}
+
+.cta-description {
+    font-size: 1.2rem;
+    color: #e0f7fa;
+    margin-bottom: 1.5rem;
+    z-index: 1;
+    position: relative;
 }
 
 .cta-button {
-    background-color: #80cbc4;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(45deg, #80cbc4, #26a69a);
     color: white;
-    padding: 0.4rem 1rem;
+    padding: 0.8rem 2rem;
     font-size: 1.2rem;
+    font-weight: bold;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
     text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    z-index: 1;
+    position: relative;
 }
 
 .cta-button:hover {
-    background-color: #5fa99a;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
+
+.cta-button-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.cta-button:hover .cta-button-icon {
+    transform: scale(1.2);
+}
+
 
 /* Responsive Styling */
 @media (max-width: 768px) {

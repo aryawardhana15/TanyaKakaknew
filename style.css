@@ -383,7 +383,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url('asset/baru\ lg.png');
+    background-image: url('asset/new\ bg\ heroo2.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: var(--primary);
@@ -430,7 +430,10 @@ body {
   }
   
   .hero .content h1 span {
-    color: var(--primary);
+    background: linear-gradient(135deg, #FFD700, #FFB700, #FFCA28); /* Gradasi emas cerah yang elegan */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Transparansi untuk efek gradien */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Memberikan bayangan halus untuk kedalaman */
   }
   
   .hero .content p {
@@ -525,7 +528,7 @@ body {
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 10px;
-    background: linear-gradient(135deg, #FFD700, #FFC107); /* Warna emas dan kuning */
+    background: white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; /* Transparansi untuk efek gradien */
     text-align: center; /* Menempatkan subtitle di tengah */
@@ -2145,6 +2148,8 @@ body {
 }
 
 
+
+
 .gallery-card .card-title {
   font-size: var(--fs-4);
   font-weight: var(--fw-bold);
@@ -2182,11 +2187,16 @@ body {
 
 
 #galleryh2 {
-  text-align: center;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  font-size: 30px;
-  font-style: poppins, sans-serif;
+  margin-inline: 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background: white;
+  text-shadow: #000000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Transparansi untuk efek gradien */
+  text-align: center; /* Menempatkan subtitle di tengah */
 }
 
 .container-grafik {

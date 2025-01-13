@@ -7,35 +7,71 @@
     <link rel="stylesheet" href="bpc.css">
 </head>
 <body>
-    <section id="hero" class="section-hero">
+    <section id="intro" class="section-intro">
         <div class="container">
-            <h1 class="title">Web Beasiswa</h1>
-            <p class="description">
-                Ingin mendapatkan beasiswa bergengsi? Program bimbingan beasiswa kami dirancang untuk membantumu mempersiapkan seluruh kebutuhan, mulai dari esai hingga proses pendaftaran, agar peluangmu diterima semakin besar.
-            </p>
+            <div class="intro-content">
+                <div class="intro-text">
+                    <h1 class="title">Bimbingan Beasiswa</h1>
+                    <p class="description">
+                        Ingin mendapatkan beasiswa bergengsi? Program bimbingan beasiswa kami dirancang untuk membantumu mempersiapkan seluruh kebutuhan, mulai dari esai hingga proses pendaftaran, agar peluangmu diterima semakin besar.
+                    </p>
+                    <div class="container">
+                        <div class="about-tabs">
+                            <div class="tab active" data-tab="tab1">Pengertian</div>
+                            <div class="tab" data-tab="tab2">Manfaat</div>
+                            <div class="tab" data-tab="tab3">Tujuan</div>
+                        </div>
+                        
+                        <div class="about-content">
+                            <div id="tab1" class="content active" style="font-size:medium; color: aliceblue;">
+                                <p>
+                                    Bimbingan Beasiswa adalah program yang memberikan panduan komprehensif dalam proses aplikasi beasiswa, termasuk tips menulis esai, mempersiapkan wawancara, dan memenuhi syarat-syarat lainnya.
+                                </p>
+                            </div>
+                            <div id="tab2" class="content" style="font-size:medium; color: aliceblue;">
+                                <p>
+                                    Dengan bimbingan ini, kamu dapat meningkatkan peluangmu untuk mendapatkan beasiswa, memahami proses seleksi, dan mempersiapkan diri dengan lebih baik.
+                                </p>
+                            </div>
+                            <div id="tab3" class="content" style="font-size:medium; color: aliceblue;">
+                                <p>
+                                    Tujuan program ini adalah untuk membantu setiap peserta meraih beasiswa dengan mempersiapkan mereka dalam aspek teknis dan mental yang dibutuhkan selama proses aplikasi.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro-image">
+                    <img src="asset/Blue Green Watercolor Linktree Background lanjutan.png" alt="Bimbingan Beasiswa" class="image">
+                </div>
+            </div>
         </div>
     </section>
+    
 
-    <section id="about" class="section-about">
-        <div class="container">
-            <h2 class="subtitle">Apa Itu Program Bimbingan Beasiswa?</h2>
-            <p class="description">
-                Program ini membantu calon penerima beasiswa memahami langkah-langkah pendaftaran, menyusun esai yang menarik, dan mempersiapkan semua dokumen penting. Fokus kami adalah memastikan kamu memenuhi persyaratan dengan baik dan tampil unggul di antara pelamar lainnya.
-            </p>
+ 
+    <section class="beasiswa">
+        <h2 class="section-title">Beasiswa Tersedia</h2>
+        <p class="description">Temukan berbagai program beasiswa yang kami tawarkan untuk membantu pendidikan Anda.</p>
+        <div class="beasiswa-grid">
+            <div class="beasiswa-card">
+                <h3>Beasiswa Pendidikan</h3>
+                <p>Beasiswa ini ditujukan untuk mahasiswa yang membutuhkan dukungan finansial untuk melanjutkan studi di perguruan tinggi.</p>
+                <button class="apply-button">Ajukan Sekarang</button>
+            </div>
+            <div class="beasiswa-card">
+                <h3>Beasiswa Prestasi</h3>
+                <p>Beasiswa untuk mahasiswa berprestasi di bidang akademik atau non-akademik yang dapat membantu Anda mencapai tujuan pendidikan.</p>
+                <button class="apply-button">Ajukan Sekarang</button>
+            </div>
+            <div class="beasiswa-card">
+                <h3>Beasiswa Khusus</h3>
+                <p>Beasiswa untuk kelompok khusus seperti mahasiswa dengan latar belakang kurang mampu atau penyandang disabilitas.</p>
+                <button class="apply-button">Ajukan Sekarang</button>
+            </div>
         </div>
     </section>
-
-    <section id="scholarships" class="section-scholarships">
-        <div class="container">
-            <h2 class="subtitle">Beasiswa yang Dibimbing</h2>
-            <ul class="beasiswa-list">
-                <li>Beasiswa Djarum Plus</li>
-                <li>Beasiswa Generasi Baru Indonesia (GenBI)</li>
-                <li>Beasiswa Karya Salemba Empat (KSE)</li>
-                <li>Beasiswa lain dari institusi atau universitas terbaik di Indonesia.</li>
-            </ul>
-        </div>
-    </section>
+    
 
     <section id="benefits" class="section-benefits">
         <div class="container">
@@ -73,40 +109,66 @@
         </div>
     </section>
 
-    <section id="how-it-works" class="section-how-it-works">
+    <section id="how-it-works" class="section how-it-works">
         <div class="container">
-            <h2 class="subtitle">Bagaimana Cara Kerjanya?</h2>
+            <h2 class="subtitle">Bagaimana Cara Mendapatkan Beasiswa?</h2>
+            <div class="navigation">
+                <button id="prevStep" class="nav-button" disabled>&larr; Sebelumnya</button>
+                <button id="nextStep" class="nav-button">Berikutnya &rarr;</button>
+            </div>
             <div class="steps">
-                <div class="step">
-                    <h3 class="step-title">1. Akses Modul</h3>
-                    <p class="step-description">
-                        Kamu akan mendapatkan akses ke modul yang terstruktur dan tutorial video tentang penyusunan esai untuk beasiswa.
-                    </p>
+                <div class="step active" data-step="1">
+                    <div class="step-icon">
+                        <span class="step-number">1</span>
+                    </div>
+                    <div class="step-content">
+                        <p class="step-description">
+                            Pertama, lengkapi formulir pendaftaran beasiswa yang tersedia di website kami.
+                        </p>
+                    </div>
                 </div>
-                <div class="step">
-                    <h3 class="step-title">2. Mentoring Esai</h3>
-                    <p class="step-description">
-                        Kamu akan mengikuti sesi mentoring dengan mentor berpengalaman untuk menyempurnakan esai dan dokumen lainnya.
-                    </p>
+                <div class="step" data-step="2">
+                    <div class="step-icon">
+                        <span class="step-number">2</span>
+                    </div>
+                    <div class="step-content">
+                        <p class="step-description">
+                            Kemudian, unggah dokumen-dokumen pendukung seperti transkrip nilai dan surat rekomendasi.
+                        </p>
+                    </div>
                 </div>
-                <div class="step">
-                    <h3 class="step-title">3. Persiapan Pendaftaran</h3>
-                    <p class="step-description">
-                        Setelah itu, kamu akan siap untuk mengirimkan aplikasi beasiswa dan bersaing dalam seleksi.
-                    </p>
+                <div class="step" data-step="3">
+                    <div class="step-icon">
+                        <span class="step-number">3</span>
+                    </div>
+                    <div class="step-content">
+                        <p class="step-description">
+                            Setelah itu, tim seleksi kami akan menilai aplikasi dan menghubungi kamu untuk tahap wawancara.
+                        </p>
+                    </div>
+                </div>
+                <div class="step" data-step="4">
+                    <div class="step-icon">
+                        <span class="step-number">4</span>
+                    </div>
+                    <div class="step-content">
+                        <p class="step-description">
+                            Jika lolos, kamu akan menerima pemberitahuan mengenai beasiswa yang diberikan dan instruksi lebih lanjut.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    
 
-    <section id="cta" class="section-cta">
-        <div class="container">
-            <h2 class="cta-title">Siap Menghadapi Seleksi Beasiswa?</h2>
-            <p class="cta-description">
-                Gabung sekarang dan persiapkan dirimu untuk mendapatkan beasiswa impian!
-            </p>
-            <a class="cta-button" href="halamanbayar.html">Daftar Sekarang</a>
-        </div>
+    <section class="cta">
+        <h2 class="cta-title">Join Our Community Today!</h2>
+        <p class="cta-description">Don’t miss the chance to be part of an amazing journey with us. Join now and start exploring endless possibilities!</p>
+        <a href="#signup" class="cta-button">
+            <span class="cta-button-icon">🚀</span>
+            Get Started
+        </a>
     </section>
 
     <script src="bpc.js"></script>
