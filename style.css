@@ -237,7 +237,7 @@ body {
   align-items: center;
   padding: 1.4rem 7%;
   margin: 0;
-  background: #0B7ABF;
+  background: linear-gradient(to right, #0A4C9C, #1D7AD4);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   position: fixed;
@@ -486,7 +486,7 @@ body {
   }
   .about {
     padding-block: var(--section-padding);
-    background-color:#91C4D9;
+    background-color:#A0CFE9;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     margin-bottom: 50px;
@@ -521,23 +521,27 @@ body {
   
   .about .section-subtitle {
     margin-inline: 0;
-    color: #0B7ABF;
     font-size: 20px;
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 10px;
-  }
+    background: linear-gradient(135deg, #FFD700, #FFC107); /* Warna emas dan kuning */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Transparansi untuk efek gradien */
+    text-align: center; /* Menempatkan subtitle di tengah */
+}
+
   
   .about .section-title {
     --text-align: left;
     --margin-bottom: 20px;
     font-size: var(--fs-2);
     font-weight: var(--fw-700);
-    color:#418FBF;
+    color:#138ad3
   }
   
   .about-text {
-    color:#418FBF;
+    color:#ffffff;
     font-size: var(--fs-5);
     line-height: 1.8;
     margin-bottom: 30px;
@@ -564,16 +568,18 @@ body {
     transform: translateX(10px);
   }
   
-  .about-item-icon {
-    background: linear-gradient(135deg, #66aaff, #1976d2);
-
+ 
+ 
+.about-item-icon {
+    background: linear-gradient(135deg, #FFD700, #FFC107); /* Gradasi emas-kuning */
     height: 50px;
     width: 50px;
     border-radius: 50%;
     display: grid;
     place-items: center;
-    box-shadow: 0 4px 10px rgba(0, 128, 0, 0.1);
-  }
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5); /* Glow efek */
+}
+
   
   .about-item-icon ion-icon {
     color: #fff;
@@ -581,7 +587,7 @@ body {
   }
   
   .about-item-text {
-    color: #1f44b4 ;
+    color: #ffffff ;
     font-size: var(--fs-5);
     font-weight: var(--fw-500);
   }
@@ -600,21 +606,20 @@ body {
   }
   
   .about .btn {
-    max-width: max-content;
-    --text-transform: uppercase;
-    background: linear-gradient(135deg, #64b5f6, #1e88e5);
+    background: linear-gradient(135deg, #FFC107, #FF9800); /* Gradasi kuning-oranye */
     color: #fff;
     font-size: var(--fs-5);
     font-weight: bold;
     text-transform: uppercase;
     padding: 10px 25px;
     border-radius: 25px;
-    transition: background 0.3s ease-in-out;
-  }
-  
-  .about .btn:hover {
-    background: linear-gradient(135deg, #1e88e5, #1565c0);
-  }
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.about .btn:hover {
+    background: linear-gradient(135deg, #FF9800, #FFC107);
+    box-shadow: 0 8px 15px rgba(255, 193, 7, 0.7); /* Efek cahaya saat hover */
+}
   
   
   
