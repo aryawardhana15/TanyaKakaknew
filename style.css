@@ -237,7 +237,7 @@ body {
   align-items: center;
   padding: 1.4rem 7%;
   margin: 0;
-  background: rgb(25, 60, 40); /* Hijau gelap modern */
+  background: #0B7ABF;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   position: fixed;
@@ -265,7 +265,7 @@ body {
 }
 
 .navbar .navbar-nav a:hover {
-  color: rgb(100, 160, 120); /* Hijau lembut */
+  color: #F2B705;
 }
 
 .navbar .navbar-nav a::after {
@@ -287,7 +287,7 @@ body {
 }
 
 .navbar .navbar-extra a:hover {
-  color: rgb(100, 160, 120); /* Hijau lembut */
+  color: #F2B705;
 }
 
 #hamburger-menu {
@@ -486,7 +486,7 @@ body {
   }
   .about {
     padding-block: var(--section-padding);
-    background-color: #b7d1ef;
+    background-color:#91C4D9;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     margin-bottom: 50px;
@@ -521,7 +521,7 @@ body {
   
   .about .section-subtitle {
     margin-inline: 0;
-    color: #2e7d32;
+    color: #0B7ABF;
     font-size: 20px;
     text-transform: uppercase;
     font-weight: bold;
@@ -533,11 +533,11 @@ body {
     --margin-bottom: 20px;
     font-size: var(--fs-2);
     font-weight: var(--fw-700);
-    color: #1b5e20;
+    color:#418FBF;
   }
   
   .about-text {
-    color: #4caf50;
+    color:#418FBF;
     font-size: var(--fs-5);
     line-height: 1.8;
     margin-bottom: 30px;
@@ -565,7 +565,8 @@ body {
   }
   
   .about-item-icon {
-    background: linear-gradient(135deg, #66bb6a, #388e3c);
+    background: linear-gradient(135deg, #66aaff, #1976d2);
+
     height: 50px;
     width: 50px;
     border-radius: 50%;
@@ -580,19 +581,19 @@ body {
   }
   
   .about-item-text {
-    color: #2e7d32;
+    color: #1f44b4 ;
     font-size: var(--fs-5);
     font-weight: var(--fw-500);
   }
   
   .about .callout {
-    background: #e8f5e9;
-    color: #388e3c;
+    background: #e3f2fd;
+    color: #1976d2;
     font-size: var(--fs-5);
     font-weight: var(--fw-500);
     line-height: 1.8;
     padding: 20px 25px;
-    border-left: 4px solid #2e7d32;
+    border-left: 4px solid #1565c0;
     border-radius: 5px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
@@ -601,7 +602,7 @@ body {
   .about .btn {
     max-width: max-content;
     --text-transform: uppercase;
-    background: linear-gradient(135deg, #66bb6a, #43a047);
+    background: linear-gradient(135deg, #64b5f6, #1e88e5);
     color: #fff;
     font-size: var(--fs-5);
     font-weight: bold;
@@ -612,8 +613,9 @@ body {
   }
   
   .about .btn:hover {
-    background: linear-gradient(135deg, #43a047, #2e7d32);
+    background: linear-gradient(135deg, #1e88e5, #1565c0);
   }
+  
   
   
 
@@ -1551,7 +1553,7 @@ body {
 
 /* Footer Styles */
 .footer {
-  background: linear-gradient(135deg, #007f5f, #00b894);
+  background: #0B7ABF;
   color: #ffffff;
   padding: 50px 20px;
   font-family: 'Arial', sans-serif;
@@ -1896,6 +1898,7 @@ body {
 .swiper-container {
   width: 100%;
   padding: 1rem;
+  background-color: #CEECF2;
 
 }
 
