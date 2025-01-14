@@ -148,7 +148,8 @@ address {
 .container { padding-inline: 15px; }
 
 .section-title {
-  --color: var(--radical-red);
+  color: rgba(255, 255, 255, 0.881);
+
   font-size: 30px;
   text-align: center;
   margin-bottom: 10px;
@@ -249,11 +250,21 @@ body {
   border-radius-top: 100px; /* Pastikan hanya sudut atas yang melengkung */
 }
 
-.navbar .navbar-logo {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #ffffff;
-  font-style: italic;
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.navbar-logo img {
+  max-height: 40px; /* Atur tinggi maksimum logo */
+ 
+  transition: transform 0.3s ease;
 }
 
 .navbar .navbar-nav a {
@@ -628,18 +639,18 @@ body {
   
 
   
-
-
 /* Mentor Section */
 .mentor-section {
-  padding: 50px 0;
-  background-color: #ceecf2;
+  padding: 80px 0;
+  background-color: #f5f5f5;
+  position: relative;
+  overflow: hidden;
 }
 
 .mentor-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 20px;
   text-align: center;
 }
 
@@ -650,152 +661,102 @@ body {
 }
 
 .mentor-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   color: #333;
 }
 
-/* Mentor Grid */
-.mentor-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  list-style: none;
-  padding: 0;
+/* Mentor List */
+.mentor-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 
-/* Mentor Item */
 .mentor-item {
-  background-color: #fff;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  transition: transform 0.3s ease;
+  position: relative;
 }
 
 .mentor-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
 }
 
-/* Mentor Card */
-.mentor-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+.mentor-left {
+  flex-direction: row;
 }
 
-.mentor-banner {
-  position: relative;
-  width: 100%;
-  padding-top: 100%; /* Aspect ratio 1:1 */
-  border-radius: 20%;
-  overflow: hidden;
-  margin-bottom: 20px;
+.mentor-right {
+  flex-direction: row-reverse;
 }
 
 .mentor-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
   object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
-/* Mentor Content */
-.mentor-content {
-  text-align: center;
+.mentor-item:hover .mentor-image {
+  transform: rotate(5deg) scale(1.1);
+}
+
+.mentor-info {
+  max-width: 600px;
+  text-align: left;
 }
 
 .mentor-name {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  margin: 10px 0;
   color: #333;
 }
 
-.mentor-link {
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.3s ease;
-}
-
-.mentor-link:hover {
-  color: #007bff;
-}
-
 .mentor-job {
-  font-size: 1rem;
-  color: #6c757d;
-  margin-bottom: 15px;
-}
-
-.mentor-meta {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 15px;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.mentor-meta-item {
-  display: flex;
-  align-items: center;
-  font-size: 0.9rem;
-  color: #6c757d;
-}
-
-.mentor-meta-item ion-icon {
-  margin-right: 5px;
   font-size: 1.2rem;
-}
-
-.mentor-meta-text {
-  font-size: 0.9rem;
+  color: #007bff;
+  margin: 5px 0;
 }
 
 .mentor-description {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #555;
   line-height: 1.6;
 }
 
-/* Mentor Button */
-.mentor-btn {
+/* Background Decorations */
+.mentor-section::before,
+.mentor-section::after {
+  content: "";
   position: absolute;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: #007bff;
-  color: #fff;
+  width: 300px;
+  height: 300px;
+  background: rgba(0, 123, 255, 0.1);
   border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  text-decoration: none;
+  z-index: 0;
 }
 
-.mentor-btn:hover {
-  background-color: #0056b3;
-  transform: scale(1.1);
+.mentor-section::before {
+  top: -100px;
+  left: -50px;
 }
 
-.mentor-btn ion-icon {
-  font-size: 1.2rem;
+.mentor-section::after {
+  bottom: -100px;
+  right: -50px;
 }
-
 
 /* stats */
 
 .stats {
-  background-color: #ceecf2;
+  background-color: #ebf1f5;
+background-image: url("https://www.transparenttextures.com/patterns/corrugation.png");
   padding: 4rem 2rem;
   text-align: center;
   color: #333;
@@ -808,7 +769,7 @@ body {
 }
 
 .stats span {
-  color: #2ecc71;
+  color: #2e5bcc;
   font-style: italic;
 }
 
@@ -821,7 +782,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap;
+  
 }
 
 .stat-item {
@@ -845,7 +806,7 @@ body {
 
 .stat-icon {
   font-size: 3rem;
-  color: #2ecc71;
+  color: #7bbbf3;
   margin-bottom: 1rem;
 }
 
@@ -861,8 +822,76 @@ body {
   color: #777;
 }
 
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: row; /* Elemen akan ditampilkan vertikal */
+    align-items: center;   /* Pusatkan elemen secara horizontal */
+  }
+}
 
 
+@media (max-width: 768px) {
+  .stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; /* Elemen akan ditampilkan vertikal */
+    align-items: center;   /* Pusatkan elemen secara horizontal */
+    gap: 1.5rem;           /* Kurangi jarak antar elemen */
+  }
+
+  .stats h2 {
+    font-size: 2rem;       /* Perkecil ukuran font untuk heading */
+  }
+
+  .stats p {
+    font-size: 0.7rem;       /* Perkecil ukuran font untuk paragraf */
+  }
+
+  .stat-item {
+    width: 100px;          /* Kurangi ukuran lingkaran */
+    height: 100px;
+    padding: 1.5rem;       /* Sesuaikan padding */
+
+  }
+
+  .stat-icon {
+    font-size: 2.5rem;     /* Perkecil ukuran ikon */
+  }
+
+  .stat-info h3 {
+    font-size: 1rem;     /* Perkecil ukuran judul */
+  }
+
+  .stat-info p {
+    font-size: 0.9rem;     /* Perkecil ukuran paragraf dalam stat */
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-container {
+    gap: 1rem;             /* Kurangi lagi jarak antar elemen */
+    flex-direction: row; /* Elemen akan ditampilkan vertikal */
+    align-items: center;   /* Pusatkan elemen secara horizontal */
+  }
+
+  .stat-item {
+    width: 100px;          /* Kurangi lagi ukuran lingkaran untuk ponsel */
+    height: 100px;
+    padding: 1rem;
+  }
+
+  .stat-icon {
+    font-size: 1.2rem;       /* Sesuaikan ukuran ikon */
+  }
+
+  .stat-info h3 {
+    font-size: 1.2rem;     /* Ukuran heading lebih kecil */
+  }
+
+  .stat-info p {
+    font-size: 0.8rem;     /* Ukuran paragraf lebih kecil */
+  }
+}
 
 
   /* Menu Section */
@@ -892,9 +921,33 @@ body {
   
   @media screen and (max-width: 768px) {
     .blog-list {
-      flex-direction: column; /* Mengatur elemen menjadi vertikal pada layar kecil */
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row; /* Mengatur elemen menjadi vertikal pada layar kecil */
       overflow-x: visible; /* Menonaktifkan scroll horizontal pada layar kecil */
+
     }
+
+    .blog-card {
+      display: block;
+      width: 300px; /* Penuhi lebar container */
+      margin: 0 auto; /* Pusatkan jika ada margin horizontal */
+    }
+    .blog-card .card-banner {
+      overflow: hidden;
+      aspect-ratio: 1/1;
+      background-color: #e9ecef;
+  
+    }
+
+    .blog-card .card-banner img {
+      width: 100px;
+      
+      height: auto;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
   }
   
   
@@ -1017,12 +1070,14 @@ body {
   
   text-align: center;
   padding: 2rem;
-  background-color: #ceecf2;
+  background-color: #1e8da3;
+  background-image: url(http://www.transparenttextures.com/patterns/cartographer.png);
 }
 
 .products h2 {
   font-size: 2.5rem;
-  color: #333;
+  color:rgb(255, 255, 255);
+ 
   margin-bottom: 0.5rem;
 }
 
@@ -1032,7 +1087,7 @@ body {
 
 .products p {
   font-size: 1.2rem;
-  color: #6c757d;
+  color: #ffffff;
   margin-bottom: 2rem;
 }
 
@@ -1129,7 +1184,8 @@ body {
 
   
   .property { 
-    background-color: #ceecf2;
+    background-color: #a2e1ed;
+    background-image: url(http://www.transparenttextures.com/patterns/gplay.png);
 
     padding-block: var(--section-padding); 
   
@@ -1148,7 +1204,7 @@ body {
     }
     
   .property-card {
-    background-color: #e8efeb;
+    background-color: #e8ebef;
     border: 1px solid var(--alice-blue);
     box-shadow: var(--shadow-2);
   }
@@ -1211,7 +1267,7 @@ body {
   }
   
   .card-price {
-    color: green;
+    color: rgb(55, 157, 55);
     font-family: var(--ff-poppins);
     font-size: var(--fs-5);
     margin-bottom: 5px;
@@ -1219,7 +1275,7 @@ body {
   }
 
   #h3-cardtitle{
-    color: rgb(29, 113, 45);
+    color: rgb(29, 96, 113);
   }
 
   
@@ -1416,15 +1472,16 @@ body {
   .quotetesti {
     text-align: center;
     border-bottom-right-radius: 150px;
-    padding: 20px;
+    padding: 10px;
     border-top-left-radius: 150px;
     height: 400px;
     width: 600px;
-    margin: 20px;
+    margin: 20% auto;
     align-items: center;
     display: flex;
     justify-content: center;
-    margin-left: 300px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #f8f8f8;
     margin-top: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Menambahkan efek bayangan pada video */
@@ -1437,13 +1494,6 @@ body {
     border-radius: 150px;
     object-fit: cover; /* Agar video terisi penuh dalam kontainer */
   }
-  
-
-
-  
-  
-  
-  
   
   /* Contact Section */
   .contact .row {
@@ -1911,6 +1961,8 @@ body {
   width: 100%;
   padding: 1rem;
   background-color: #CEECF2;
+  background-image: url(http://www.transparenttextures.com/patterns/diagonal-noise.png);
+
 
 }
 
@@ -1987,6 +2039,13 @@ body {
 @media (max-width: 768px) {
   .swiper-slide {
     min-width: 280px;
+
+    .quotetesti {
+      margin: auto;
+      margin-inline: auto;
+      width: auto;
+      height: 200px;
+    }
   }
 }
 
@@ -1998,7 +2057,8 @@ body {
 
   .quotetesti {
     margin: auto;
-    width: 300px;
+    margin-inline: 10px;
+    width: auto;
     height: 200px;
   }
 }
@@ -2044,7 +2104,8 @@ body {
 /* Style for the gallery card */
 
 .gallery {
-  background-color: #ceecf2;
+  background-color: #a2e1ed;
+  background-image: url(http://www.transparenttextures.com/patterns/arches.png);
 }
 
 
@@ -2197,9 +2258,9 @@ body {
   font-weight: bold;
   margin-bottom: 10px;
   background: white;
-  text-shadow: #000000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Tambahkan bayangan */
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; /* Transparansi untuk efek gradien */
+
   text-align: center; /* Menempatkan subtitle di tengah */
 }
 
