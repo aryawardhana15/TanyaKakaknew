@@ -642,7 +642,8 @@ body {
 /* Mentor Section */
 .mentor-section {
   padding: 80px 0;
-  background-color: #f5f5f5;
+  background-color: #8fdbf5;
+  background-image: url(http://www.transparenttextures.com/patterns/arches.png);
   position: relative;
   overflow: hidden;
 }
@@ -720,7 +721,7 @@ body {
 
 .mentor-job {
   font-size: 1.2rem;
-  color: #007bff;
+  color: #0e4076;
   margin: 5px 0;
 }
 
@@ -1099,7 +1100,7 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
 }
 
 .product-card {
-  background-color: #fff;
+  background: linear-gradient(135deg, #1196cb, #2575fc); /* Gradasi biru tua ke biru terang */
   border: 1px solid #e0e0e0;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -1111,6 +1112,8 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
 .product-card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #4e10c2, #1957e3); /* Gradasi biru lebih gelap saat hover */
 }
 
 .product-icons {
@@ -1121,7 +1124,7 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
 }
 
 .product-icons a {
-  color: #6c757d;
+  color: #d4d6d8;
   font-size: 1.2rem;
   transition: color 0.3s ease;
 }
@@ -1147,7 +1150,7 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
 
 .product-content h3 {
   font-size: 1.5rem;
-  color: #333;
+  color: #163e73; /* Biru gelap untuk teks */
   margin-bottom: 0.5rem;
 }
 
@@ -1168,7 +1171,7 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
 .product-price {
   font-size: 1.4rem;
   font-weight: bold;
-  color: #5a0f0f;
+  color: #0b3b82; /* Warna biru gelap untuk harga */
   margin-top: 0.5rem;
 }
 
@@ -1203,11 +1206,13 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
       }
     }
     
-  .property-card {
-    background-color: #e8ebef;
-    border: 1px solid var(--alice-blue);
-    box-shadow: var(--shadow-2);
-  }
+    .property-card {
+      background: #ffffff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
   
   .property-card .card-banner {
     position: relative;
@@ -1264,6 +1269,7 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
   .property-card .card-content1 {
     padding: 30px 15px 15px;
     border-bottom: 1px solid hsla(0, 0%, 0%, 0.1);
+    background: linear-gradient(120deg, #d8eefe, #a7d8f9);
   }
   
   .card-price {
@@ -1275,7 +1281,7 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
   }
 
   #h3-cardtitle{
-    color: rgb(29, 96, 113);
+    color: rgb(14, 95, 115);
   }
 
   
@@ -1283,6 +1289,7 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
   .card-price strong {
     font-size: var(--fs-4);
     font-weight: var(--fw-600);
+    
   }
   .property { padding-block: var(--section-padding); }
   
@@ -1339,7 +1346,8 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
   
   .banner-actions-btn ion-icon { font-size: 16px; }
   
-  .banner-actions-btn:first-child { margin-right: auto; }
+  .banner-actions-btn:first-child { margin-right: auto;
+   }
   
   .banner-actions-btn:is(:hover, :focus) { color: var(--orange-soda); }
   
@@ -1366,10 +1374,10 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
     margin-bottom: 15px;
   }
   
-  .property-card .card-title > a:is(:hover, :focus) { color: var(--orange-soda); }
+  .property-card .card-title > a:is(:hover, :focus) { color: purple; }
   
   .property-card .card-text {
-    color: var(--cadet);
+    color: rgb(24, 149, 194);
     font-size: var(--fs-5);
     line-height: 1.8;
     margin-bottom: 25px;
@@ -1410,6 +1418,7 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
     justify-content: space-between;
     align-items: center;
     gap: 15px;
+    background: linear-gradient(120deg, #d8eefe, #a7d8f9);
   }
   
   .card-author {
@@ -1426,7 +1435,7 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
   }
   
   .author-name > a {
-    color: var(--dark-jungle-green);
+    color: rgb(12, 42, 126);
     font-family: var(--ff-poppins);
     font-size: var(--fs-5);
     font-weight: var(--fw-600);
@@ -1447,8 +1456,8 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
   }
   
   .card-footer-actions-btn {
-    background: var(--cultured-2);
-    color: var(--cadet);
+    background:rgb(95, 182, 245);
+    color: white;
     width: 35px;
     height: 35px;
     display: grid;
@@ -1457,7 +1466,7 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
   }
   
   .card-footer-actions-btn:is(:hover, :focus) {
-    background: var(--orange-soda);
+    background: rgb(40, 52, 215);
     color: var(--white);
   }
 /* 
