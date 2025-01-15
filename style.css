@@ -87,15 +87,15 @@ address {
 }
 
 ::-webkit-scrollbar-track {
-  background: #9cf1cf; /* Ubah ini ke warna background Anda */
+  background: #9cbef1; /* Ubah ini ke warna background Anda */
   border-radius: 10px; /* Membuat track melengkung */
  
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #fff; /* Ubah ini ke warna thumb Anda */
+  background: #a4c4dc; /* Ubah ini ke warna thumb Anda */
   border-radius: 10px; /* Membuat thumb melengkung */
-  background-color: rgb(15, 91, 67);
+  background-color: rgb(26, 87, 161);
 }
 
 .container { padding-inline :15px; } /* Ini untuk mengatur lebar container kiri kanannnya karna itu inline*/
@@ -496,7 +496,7 @@ body {
   .menu h2 span,
   .products h2 span,
   .contact h2 span {
-    color: green;
+    color: rgb(157, 181, 243);
   }
   .about {
     padding-block: var(--section-padding);
@@ -910,7 +910,7 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
   
   /* Mengatur tampilan scrollbar secara khusus untuk browser berbasis WebKit */
 .blog-list::-webkit-scrollbar-thumb {
-  background-color: #007bff; /* Warna tombol scrollbar */
+  background-color: #6cabef; /* Warna tombol scrollbar */
   border-radius: 10px;
 }
 
@@ -925,7 +925,7 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
       display: flex;
       flex-wrap: wrap;
       flex-direction: row; /* Mengatur elemen menjadi vertikal pada layar kecil */
-      overflow-x: visible; /* Menonaktifkan scroll horizontal pada layar kecil */
+   
 
     }
 
@@ -1190,7 +1190,9 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
     background-color: #a2e1ed;
     background-image: url(http://www.transparenttextures.com/patterns/gplay.png);
 
-    padding-block: var(--section-padding); 
+    padding-block: var(--section-padding);
+    
+  
   
   }
   
@@ -1388,6 +1390,7 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
     flex-wrap: wrap;
     align-items: center;
     row-gap: 15px;
+   
   }
   
   .property-card .card-item {
@@ -1508,12 +1511,14 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
   .contact .row {
     display: flex;
     margin-top: 2rem;
-    background-color:hsl(149, 48%, 46%);
+    background-color:hsl(227, 48%, 46%);
   }
 
   .contact  {
     background-color: #f2f7f4; /* Latar belakang terang untuk keseluruhan section */
   }
+
+
   
   .contact .row .map {
     flex: 1 1 45rem;
@@ -1525,6 +1530,7 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
     flex: 1 1 45rem;
     padding: 5rem 2rem;
     text-align: center;
+    background-color: #438bd8;
   }
   
   .contact .row form .input-group {
@@ -1550,7 +1556,7 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
     padding: 1rem 3rem;
     font-size: 1.7rem;
     color: #fff;
-    background-color: var(--primary);
+    background-color:rgb(72, 148, 224);
     cursor: pointer;
   }
   
@@ -2063,6 +2069,52 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
     min-width: 100%;
 
   }
+
+  .property-list {
+    overflow-x: auto;
+  }
+
+  /* Scrollbar untuk perangkat WebKit */
+.property::-webkit-scrollbar {
+  width: 8px; /* Lebar scrollbar */
+  height: 8px; /* Tinggi scrollbar (untuk horizontal scroll) */
+}
+
+
+
+.property::-webkit-scrollbar-thumb {
+  background-color: #007BFF; /* Warna thumb (bagian yang dapat digeser) */
+  border-radius: 10px; /* Membuatnya bulat */
+}
+
+.property::-webkit-scrollbar-track {
+  background-color: #D8E3E8; /* Warna latar belakang scrollbar */
+  border-radius: 10px;
+}
+
+
+  .blog-list::-webkit-scrollbar-thumb {
+    background-color: #007bff; /* Warna tombol scrollbar */
+    border-radius: 10px;
+  }
+  
+  .blog-list::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Warna track scrollbar */
+    height: 1000px;
+  }
+
+  .has-scrollbar {
+    gap: 25px;
+    margin-inline: -25px;
+    padding-inline: 25px;
+    scroll-padding-left: 25px;
+}
+
+.has-scrollbar::-webkit-scrollbar-track {
+  background: var(--cultured-2);
+  outline: 2px solid var(--cadet);
+  border-radius: 10px;
+}
 
   .quotetesti {
     margin: auto;
