@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pembayaran</title>
+  <link rel="stylesheet" href="pembayaran.css">
+</head>
+<body>
+  <div class="payment-container">
+    <h1>Pembayaran Kursus</h1>
+    <p>Unggah bukti pembayaran dan pastikan email Anda benar untuk menerima konfirmasi.</p>
+
+    <form id="payment-form" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="Masukkan email Anda">
+      </div>
+
+      <div class="form-group">
+        <label for="payment-method">Metode Pembayaran</label>
+        <select id="payment-method" name="payment-method" required>
+          <option value="mandiri">Bank Mandiri</option>
+          <option value="bca">Bank BCA</option>
+          <option value="bni">Bank BNI</option>
+          <option value="shopeepay">ShopeePay</option>
+          <option value="dana">Dana</option>
+          <option value="ovo">OVO</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="payment-proof">Upload Bukti Pembayaran</label>
+        <input type="file" id="payment-proof" name="payment-proof" accept="image/*" required>
+      </div>
+
+      <button type="submit" class="pay-button">Konfirmasi</button>
+    </form>
+
+    <div id="message" style="display: none; margin-top: 20px;"></div>
+  </div>
+
+  <script>
+    document.getElementById("payment-form").addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(this);
+      const response = await fetch("/submit-payment", {
+        method: "POST",
+        body: formData,
+      });
+
+      const message = document.getElementById("message");
+      if (response.ok) {
+        message.style.display = "block";
+        message.style.color = "green";
+        message.innerText = "Konfirmasi pembayaran berhasil! Email akan dikirimkan ke alamat Anda.";
+      } else {
+        message.style.display = "block";
+        message.style.color = "red";
+        message.innerText = "Terjadi kesalahan. Silakan coba lagi.";
+      }
+    });
+  </script>
+</body>
+</html>

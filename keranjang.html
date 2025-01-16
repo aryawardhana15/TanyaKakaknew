@@ -172,69 +172,84 @@
         </tbody>
       </table>
     </div>
+    <button id="go-to-order" style="margin-top: 20px;">Lanjut ke Pesanan</button>
     </div>
+
     
     <div class="footer">
       &copy; 2025 TanyaKakak - All rights reserved.
     </div>
     
-    <script>
-      const cart = [];
+    <script>const cart = [];
+
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+          button.addEventListener('click', function () {
+            const product = this.parentElement;
+            const id = product.getAttribute('data-id');
+            const name = product.getAttribute('data-name');
+            const price = parseInt(product.getAttribute('data-price')); // Harga sudah berbentuk angka
     
-      document.querySelectorAll('.add-to-cart').forEach(button => {
-        button.addEventListener('click', function () {
-          const product = this.parentElement;
-          const id = product.getAttribute('data-id');
-          const name = product.getAttribute('data-name');
-          const price = parseInt(product.getAttribute('data-price')); // Harga sudah berbentuk angka
+            const existingProduct = cart.find(item => item.id === id);
     
-          const existingProduct = cart.find(item => item.id === id);
-    
-          if (existingProduct) {
-            existingProduct.quantity += 1;
-            existingProduct.total = existingProduct.quantity * existingProduct.price;
-          } else {
-            cart.push({ id, name, price, quantity: 1, total: price });
-          }
-    
-          renderCart();
-        });
-      });
-    
-      function renderCart() {
-        const cartItems = document.getElementById('cart-items');
-        cartItems.innerHTML = '';
-    
-        if (cart.length === 0) {
-          cartItems.innerHTML = '<tr><td colspan="5">Keranjang kosong</td></tr>';
-          return;
-        }
-    
-        cart.forEach(item => {
-          const row = document.createElement('tr');
-    
-          row.innerHTML = `
-            <td>${item.name}</td>
-            <td>Rp${item.price.toLocaleString()}</td>
-            <td>${item.quantity}</td>
-            <td>Rp${item.total.toLocaleString()}</td>
-            <td><button class="remove-from-cart" data-id="${item.id}">Hapus</button></td>
-          `;
-    
-          row.querySelector('.remove-from-cart').addEventListener('click', function () {
-            const id = this.getAttribute('data-id');
-            const index = cart.findIndex(item => item.id === id);
-    
-            if (index !== -1) {
-              cart.splice(index, 1);
+            if (existingProduct) {
+              existingProduct.quantity += 1;
+              existingProduct.total = existingProduct.quantity * existingProduct.price;
+            } else {
+              cart.push({ id, name, price, quantity: 1, total: price });
             }
     
             renderCart();
           });
-    
-          cartItems.appendChild(row);
         });
-      }
+    
+        function renderCart() {
+          const cartItems = document.getElementById('cart-items');
+          cartItems.innerHTML = '';
+    
+          let totalPrice = 0; // Variabel untuk menyimpan total harga seluruh keranjang
+    
+          if (cart.length === 0) {
+            cartItems.innerHTML = '<tr><td colspan="5">Keranjang kosong</td></tr>';
+            sessionStorage.setItem('totalPrice', 0); // Set total harga ke 0 jika keranjang kosong
+            return;
+          }
+    
+          cart.forEach(item => {
+            totalPrice += item.total; // Tambahkan harga total setiap item ke total harga
+            const row = document.createElement('tr');
+    
+            row.innerHTML = `
+              <td>${item.name}</td>
+              <td>Rp${item.price.toLocaleString()}</td>
+              <td>${item.quantity}</td>
+              <td>Rp${item.total.toLocaleString()}</td>
+              <td><button class="remove-from-cart" data-id="${item.id}">Hapus</button></td>
+            `;
+    
+            row.querySelector('.remove-from-cart').addEventListener('click', function () {
+              const id = this.getAttribute('data-id');
+              const index = cart.findIndex(item => item.id === id);
+    
+              if (index !== -1) {
+                cart.splice(index, 1);
+              }
+    
+              renderCart();
+            });
+    
+            cartItems.appendChild(row);
+          });
+    
+          sessionStorage.setItem('totalPrice', totalPrice); // Simpan total harga ke Session Storage
+        }
+    
+        // Redirect ke halaman order
+        document.getElementById('go-to-order').addEventListener('click', function () {
+          location.href = 'orderpage.html'; // Redirect ke halaman order
+        });
+
+
+
     </script>
     
 </body>

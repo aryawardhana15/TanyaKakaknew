@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pembayaran</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333333;
+      margin-bottom: 20px;
+    }
+    .total-price {
+      font-size: 1.2em;
+      margin-top: 20px;
+      text-align: center;
+      color: #444444;
+    }
+    .payment-instructions {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      background-color: #fdfdfd;
+    }
+    h2 {
+      font-size: 1.2em;
+      color: #666666;
+      margin-bottom: 15px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    ul li {
+      margin-bottom: 10px;
+      font-size: 1em;
+      color: #333333;
+    }
+    ul li span {
+      font-weight: bold;
+      color: #1c449b;
+    }
+    .btn-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .btn {
+      display: inline-block;
+      background: #3ebf8c;
+      color: #ffffff;
+      padding: 12px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1em;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #35a47a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Metode Pembayaran</h1>
+    <p>Silakan pilih metode pembayaran di bawah ini dan lakukan transfer sesuai total harga Anda. Jika sudah selesai, unggah bukti pembayaran pada halaman berikutnya.</p>
+
+    <div class="total-price">
+      Total Harga: <strong id="total-price-display">Rp0</strong>
+    </div>
+
+    <div class="payment-instructions">
+      <h2>Rekening Bank</h2>
+      <ul>
+        <li><span>Bank Mandiri:</span> 123-456-7890 a.n. PT Tanya Kakak</li>
+        <li><span>Bank BCA:</span> 987-654-3210 a.n. PT Tanya Kakak</li>
+        <li><span>Bank BNI:</span> 567-890-1234 a.n. PT Tanya Kakak</li>
+      </ul>
+      <h2>E-Wallet</h2>
+      <ul>
+        <li><span>ShopeePay:</span> 0812-3456-7890</li>
+        <li><span>Dana:</span> 0812-3456-7890</li>
+        <li><span>OVO:</span> 0812-3456-7890</li>
+      </ul>
+      <p>Harap lakukan pembayaran dalam waktu <strong>24 jam</strong> untuk menghindari pembatalan pesanan.</p>
+    </div>
+
+    <div class="btn-container">
+      <a href="payment.html" class="btn">Unggah Bukti Pembayaran</a>
+    </div>
+  </div>
+
+  <script>
+    // Mendapatkan total harga dari sessionStorage
+    const totalPrice = sessionStorage.getItem('totalPrice') || 0;
+
+    // Tampilkan total harga pada halaman
+    document.getElementById('total-price-display').innerText = `Rp${parseInt(totalPrice).toLocaleString()}`;
+  </script>
+</body>
+</html>
