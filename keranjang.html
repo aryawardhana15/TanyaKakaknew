@@ -25,6 +25,7 @@
       align-items: center;
       margin-bottom: 20px;
       font-size: 14px;
+      gap: 20px;
     }
     .breadcrumb-item {
       margin-right: 5px;
@@ -66,7 +67,7 @@
       border-radius: 8px;
     }
     .product button {
-      background-color: #3ebf8c;
+      background-color: #40a3ef;
       color: white;
       border: none;
       padding: 10px 15px;
@@ -76,7 +77,7 @@
       transition: background-color 0.3s;
     }
     .product button:hover {
-      background-color: #32a17b;
+      background-color: #6d32a1;
     }
     #cart {
       margin-top: 40px;
@@ -118,41 +119,40 @@
       <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
       <li class="breadcrumb-item active">Keranjang Belanja</li>
     </ul>
-
     <h1>Daftar Produk</h1>
     <div id="products">
-      <div class="product" data-id="1" data-name="Bimbingan Business Plan" data-price="10000">
+      <div class="product" data-id="1" data-name="Bimbingan Business Plan" data-price="1240000">
         <img src="asset/bcc.jpg" alt="Bimbingan Business Plan" class="product-img">
         <p><strong>Bimbingan Business Plan</strong></p>
-        <p>Rp10.000</p>
+        <p>Rp1.240.000</p>
         <button class="add-to-cart">Tambah ke Keranjang</button>
       </div>
-      <div class="product" data-id="2" data-name="Bimbingan Business Case" data-price="15000">
+      <div class="product" data-id="2" data-name="Bimbingan Business Case" data-price="1240000">
         <img src="asset/bpc.jpg" alt="Bimbingan Business Case" class="product-img">
         <p><strong>Bimbingan Business Case</strong></p>
-        <p>Rp15.000</p>
+        <p>Rp1.240.000</p>
         <button class="add-to-cart">Tambah ke Keranjang</button>
       </div>
-      <div class="product" data-id="3" data-name="Bimbingan Penulisan Essay" data-price="20000">
+      <div class="product" data-id="3" data-name="Bimbingan Penulisan Essay" data-price="1240000">
         <img src="asset/essay.jpg" alt="Bimbingan Penulisan Essay" class="product-img">
         <p><strong>Bimbingan Penulisan Essay</strong></p>
-        <p>Rp20.000</p>
+        <p>Rp1.240.000</p>
         <button class="add-to-cart">Tambah ke Keranjang</button>
       </div>
-      <div class="product" data-id="4" data-name="Bimbingan Public Speaking" data-price="25000">
-        <img src="asset/minibootcamp.jpeg" alt="Bimbingan Public Speaking" class="product-img">
+      <div class="product" data-id="4" data-name="Bimbingan PKM K" data-price="1240000">
+        <img src="asset/minibootcamp.jpeg" alt="Bimbingan PKM K" class="product-img">
         <p><strong>Bimbingan PKM K</strong></p>
-        <p>Rp25.000</p>
+        <p>Rp1.240.000</p>
         <button class="add-to-cart" style="margin-top: 20px;">Tambah ke Keranjang</button>
       </div>
-      <div class="product" data-id="5" data-name="Bimbingan Problem Solving" data-price="30000">
-        <img src="asset/beasiswa.jpg" alt="Bimbingan Problem Solving" class="product-img">
+      <div class="product" data-id="5" data-name="Bimbingan Beasiswa" data-price="1240000">
+        <img src="asset/beasiswa.jpg" alt="Bimbingan Beasiswa" class="product-img">
         <p><strong>Bimbingan Beasiswa</strong></p>
-        <p>Rp30.000</p>
+        <p>Rp1.240.000</p>
         <button class="add-to-cart" style="margin-top: 20px;">Tambah ke Keranjang</button>
       </div>
     </div>
-
+    
     <h1>Keranjang</h1>
     <div id="cart">
       <table class="cart-table">
@@ -172,69 +172,70 @@
         </tbody>
       </table>
     </div>
-  </div>
-
-  <div class="footer">
-    &copy; 2025 TanyaKakak - All rights reserved.
-  </div>
-
-  <script>
-    const cart = [];
-
-    document.querySelectorAll('.add-to-cart').forEach(button => {
-      button.addEventListener('click', function () {
-        const product = this.parentElement;
-        const id = product.getAttribute('data-id');
-        const name = product.getAttribute('data-name');
-        const price = parseInt(product.getAttribute('data-price'));
-
-        const existingProduct = cart.find(item => item.id === id);
-
-        if (existingProduct) {
-          existingProduct.quantity += 1;
-          existingProduct.total = existingProduct.quantity * existingProduct.price;
-        } else {
-          cart.push({ id, name, price, quantity: 1, total: price });
-        }
-
-        renderCart();
-      });
-    });
-
-    function renderCart() {
-      const cartItems = document.getElementById('cart-items');
-      cartItems.innerHTML = '';
-
-      if (cart.length === 0) {
-        cartItems.innerHTML = '<tr><td colspan="5">Keranjang kosong</td></tr>';
-        return;
-      }
-
-      cart.forEach(item => {
-        const row = document.createElement('tr');
-
-        row.innerHTML = `
-          <td>${item.name}</td>
-          <td>Rp${item.price}</td>
-          <td>${item.quantity}</td>
-          <td>Rp${item.total}</td>
-          <td><button class="remove-from-cart" data-id="${item.id}">Hapus</button></td>
-        `;
-
-        row.querySelector('.remove-from-cart').addEventListener('click', function () {
-          const id = this.getAttribute('data-id');
-          const index = cart.findIndex(item => item.id === id);
-
-          if (index !== -1) {
-            cart.splice(index, 1);
+    </div>
+    
+    <div class="footer">
+      &copy; 2025 TanyaKakak - All rights reserved.
+    </div>
+    
+    <script>
+      const cart = [];
+    
+      document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', function () {
+          const product = this.parentElement;
+          const id = product.getAttribute('data-id');
+          const name = product.getAttribute('data-name');
+          const price = parseInt(product.getAttribute('data-price')); // Harga sudah berbentuk angka
+    
+          const existingProduct = cart.find(item => item.id === id);
+    
+          if (existingProduct) {
+            existingProduct.quantity += 1;
+            existingProduct.total = existingProduct.quantity * existingProduct.price;
+          } else {
+            cart.push({ id, name, price, quantity: 1, total: price });
           }
-
+    
           renderCart();
         });
-
-        cartItems.appendChild(row);
       });
-    }
-  </script>
+    
+      function renderCart() {
+        const cartItems = document.getElementById('cart-items');
+        cartItems.innerHTML = '';
+    
+        if (cart.length === 0) {
+          cartItems.innerHTML = '<tr><td colspan="5">Keranjang kosong</td></tr>';
+          return;
+        }
+    
+        cart.forEach(item => {
+          const row = document.createElement('tr');
+    
+          row.innerHTML = `
+            <td>${item.name}</td>
+            <td>Rp${item.price.toLocaleString()}</td>
+            <td>${item.quantity}</td>
+            <td>Rp${item.total.toLocaleString()}</td>
+            <td><button class="remove-from-cart" data-id="${item.id}">Hapus</button></td>
+          `;
+    
+          row.querySelector('.remove-from-cart').addEventListener('click', function () {
+            const id = this.getAttribute('data-id');
+            const index = cart.findIndex(item => item.id === id);
+    
+            if (index !== -1) {
+              cart.splice(index, 1);
+            }
+    
+            renderCart();
+          });
+    
+          cartItems.appendChild(row);
+        });
+      }
+    </script>
+    
 </body>
 </html>
