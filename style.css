@@ -2170,6 +2170,7 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
 }
 
 
+
 .gallery-card {
   background-color: #007bff;
   height: 430px;
@@ -2284,16 +2285,17 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
 }
 
 .gallery-card .btn-link {
-  color: var(--white);
+  color: rgb(47, 102, 197);
   display: flex;
   align-items: center;
+  font-style: italic;
   gap: 8px;
   transition: var(--transition-1);
 
 }
 
 .btn-link:is(:hover, :focus-visible) {
-  color: var(--french-bistre);
+  color: black;
 }
 
 .card-content .h3 {
@@ -2511,9 +2513,6 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
       margin-top: 10px;
   }
    
-
-
-  
     .menu p {
       font-size: 1.2rem;
     }
