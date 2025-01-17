@@ -932,6 +932,7 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
     .blog-card {
       display: block;
       width: 300px; /* Penuhi lebar container */
+      height: 100%;
       margin: 0 auto; /* Pusatkan jika ada margin horizontal */
     }
     .blog-card .card-banner {
