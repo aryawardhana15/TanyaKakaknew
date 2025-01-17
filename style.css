@@ -1793,8 +1793,6 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
 }
 
 
-
-  
 /* Modal Box */
 .modal {
   display: none;
@@ -1805,31 +1803,32 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(248, 240, 240, 0.7);
+  background-color: rgba(230, 245, 255, 0.85);
 }
 
 /* Modal Container */
 .modal-container {
   position: relative;
-  background-color: #266341;
-  color: var(--bg);
+  background: linear-gradient(135deg, #1e88e5, #1565c0);
+  color: #fff;
   margin: 5% auto;
-  padding: 1.5rem;
-  border-radius: 8px;
-  border: 1px solid #666;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #0d47a1;
   width: 90%;
   max-width: 800px;
-  animation: animateModal 0.5s;
+  animation: animateModal 0.5s ease-out;
+  box-shadow: 0 8px 20px rgba(13, 71, 161, 0.5);
 }
 
 /* Modal Animation */
 @keyframes animateModal {
   from {
-    top: -300px;
+    transform: translateY(-50px);
     opacity: 0;
   }
   to {
-    top: 0;
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -1839,9 +1838,15 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
   position: absolute;
   right: 1rem;
   top: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.modal-container .close-icon:hover {
+  color: #ffcc80;
 }
 
 /* Modal Content */
@@ -1849,9 +1854,25 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1.5rem;
 }
+
+/* Educational Highlight */
+.modal-container .modal-content h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffecb3;
+  margin-bottom: 1rem;
+}
+
+.modal-container .modal-content p {
+  font-size: 1.2rem;
+  color: #e3f2fd;
+  line-height: 1.6;
+  text-align: center;
+}
+
 
 /* Product Image Container */
 .product-image-container {
