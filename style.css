@@ -227,7 +227,7 @@ body {
   
  
  
-  color: #ffffff; /* Warna teks default */
+  color: #7b7b7b; /* Warna teks default */
   overflow-x: hidden;
 
 }
@@ -1060,6 +1060,8 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
   
     .blog-card {
       width: 100%; /* Kartu memenuhi lebar penuh */
+      height: 100%; /* Tinggi kartu 100% */
+      margin-block: 15px; /* Menambahkan jarak vertikal antar kartu (atas dan bawah) */
     }
   }
   
