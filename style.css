@@ -2377,6 +2377,7 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
   
     .navbar .navbar-nav {
       position: absolute;
+      
       top: 100%;
       right: -100%;
       background-color: #fff;
@@ -2391,7 +2392,8 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
     }
   
     .navbar .navbar-nav a {
-      color:green;
+      color: rgb(255, 215, 0); /* Elegant Gold */
+
       display: block;
       margin: 1.5rem;
       padding: 0.5rem;
