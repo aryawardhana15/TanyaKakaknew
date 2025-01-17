@@ -1,6 +1,8 @@
 //toggle class active
 const navbarNav = document.querySelector(".navbar-nav");
+
 document.querySelector("#hamburger-menu").onclick = () => {
+  event.preventDefault();
     navbarNav.classList.toggle("active");
 }
 
@@ -46,6 +48,30 @@ document.addEventListener('click', function(e) {
 //       itemDetailModal.style.display = 'none';
 //     }
 //   };
+
+// Fungsi untuk membuka modal
+function openModal(modalId) {
+  event.preventDefault();//mencegah open modal keguliar katas
+  var modal = document.getElementById(modalId);
+  modal.style.display = "block";
+}
+
+// Fungsi untuk menutup modal
+function closeModal(modalId) {
+  var modal = document.getElementById(modalId);
+  modal.style.display = "none";
+}
+
+// Menutup modal jika klik di luar modal
+window.onclick = function(event) {
+  var modals = document.querySelectorAll('.modal');
+  modals.forEach(function(modal) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+}
+
 
 // Initialize Swiper with responsive breakpoints
 document.addEventListener('DOMContentLoaded', function () {

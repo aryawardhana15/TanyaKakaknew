@@ -32,7 +32,7 @@
     <div class="navbar-nav">
       <a href="#home">Home</a>
       <a href="#about">Tentang Kami</a>
-      <a href="#menu">Menu</a>
+      <a href="#gallery">Layanan Kami</a>
       <a href="#products">Produk</a>
       <a href="#contact">Kontak</a>
     </div>
@@ -147,7 +147,7 @@
 
 
 
-  <section class="gallery">
+  <section class="gallery" id="gallery">
 
     <h2 class="h2 section-title" id="galleryh2">Layanan Kami</h2>
     <ul class="gallery-list">
@@ -719,56 +719,79 @@
 
 
   <!-- Products Section start -->
-  <section class="products" id="products">
-    <h2>Produk Unggulan Kami</h2>
-    <p>Temukan produk unggulan yang dirancang untuk membantu Anda berkembang. Dari kursus hingga layanan mentoring, kami menyediakan solusi terbaik untuk mencapai potensi penuh Anda.</p>
+<!-- Modal untuk Bimbingan Beasiswa -->
+<div id="modalBeasiswa" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalBeasiswa')">&times;</span>
+    <h3 style="color: white;">Bimbingan Beasiswa</h3>
+    <img src="asset/beasiswa.jpg" alt="Bimbingan Beasiswa" class="modal-image">
+    <p style="color: white;">Ingin mendapatkan beasiswa tetapi bingung bagaimana cara memulainya? Program Bimbingan Beasiswa kami hadir untuk membantu Anda meraih kesempatan beasiswa yang Anda impikan. Kami akan memberikan panduan langkah demi langkah tentang cara menulis esai beasiswa yang menarik, mempersiapkan wawancara, dan memahami persyaratan dari berbagai lembaga penyedia beasiswa.</p>
+    <p style="color: white;">Dengan bimbingan dari para ahli dan pengalaman praktis, Anda akan lebih siap menghadapi seleksi beasiswa dan meningkatkan peluang Anda untuk diterima. Program ini juga mencakup tips untuk memilih beasiswa yang tepat sesuai dengan minat dan tujuan pendidikan Anda.</p>
+    <div class="product-price" >IDR 1.250K <span>IDR 2.000K</span></div>
+  </div>
+</div>
 
-    <div class="row">
-      <div class="product-card">
-        <div class="product-icons">
-          <a href="#"><i data-feather="shopping-cart"></i></a>
-          <a href="" class="item-detail-button"><i data-feather="eye"></i></a>
-        </div>
-        <div class="product-image">
-          <img src="asset/post 1.jpeg" alt="Product 1">
-        </div>
-        <div class="product-content">
-          <h3 > Bimbingan Beasiswa</h3>
-          <div class="product-stars">
-            <i data-feather="star" class="star-full"></i>
-            <i data-feather="star" class="star-full"></i>
-            <i data-feather="star" class="star-full"></i>
-            <i data-feather="star" class="star-full"></i>
-            <i data-feather="star"></i>
-          </div>
-          <div class="product-price" >IDR 1.250K <span>IDR 2.000K</span></div>
-        </div>
+<!-- Modal untuk Bimbingan Business Plan Competition -->
+<div id="modalBusinessPlan" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalBusinessPlan')">&times;</span>
+    <h3 style="color: white;">Bimbingan Business Plan Competition</h3>
+    <img src="asset/bpc.jpg" alt="Bimbingan Business Plan Competition" class="modal-image">
+    <p style="color: white;">Ikuti bimbingan intensif kami untuk mempersiapkan Anda menghadapi kompetisi Business Plan dengan persiapan yang matang. Dalam program ini, Anda akan mendapatkan panduan praktis untuk menyusun rencana bisnis yang efektif, mendapatkan wawasan langsung dari para ahli, serta tips untuk memenangkan kompetisi.</p>
+    <p  style="color: white;">Program ini dirancang untuk membantu Anda memahami elemen-elemen penting dalam membuat business plan, mulai dari analisis pasar, model bisnis, hingga strategi pemasaran dan keuangan. Bimbingan ini akan memberikan Anda kepercayaan diri untuk menghadapi kompetisi dan mencapai tujuan Anda.</p>
+    <div class="product-price" >IDR 1.250K <span>IDR 2.000K</span></div>
+  </div>
+</div>
+
+<!-- Produk Unggulan -->
+<section class="products" id="products">
+  <h2>Produk Unggulan Kami</h2>
+  <p>Temukan produk unggulan yang dirancang untuk membantu Anda berkembang. Dari kursus hingga layanan mentoring, kami menyediakan solusi terbaik untuk mencapai potensi penuh Anda.</p>
+
+  <div class="row">
+    <div class="product-card">
+      <div class="product-icons">
+        <a href="keranjang.html"><i data-feather="shopping-cart"></i></a>
+        <a href="#" class="item-detail-button" onclick="openModal('modalBeasiswa')"><i data-feather="eye"></i></a>
       </div>
-      <div class="product-card">
-        <div class="product-icons">
-          <a href="#"><i data-feather="shopping-cart"></i></a>
-          <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
-        </div>
-        <div class="product-image">
-          <img src="asset/post 1.jpeg" alt="Product 1">
-        </div>
-        <div class="product-content">
-          <h3>Bimbingan Business Plan Competition</h3>
-          <div class="product-stars">
-            <i data-feather="star"></i>
-            <i data-feather="star"></i>
-            <i data-feather="star"></i>
-            <i data-feather="star"></i>
-            <i data-feather="star"></i>
-          </div>
-          <div class="product-price" >IDR 1.250K <span>IDR 2.000K</span></div>
-        </div>
+      <div class="product-image">
+        <img src="asset/beasiswa.jpg" alt="Product 1">
       </div>
-    
+      <div class="product-content">
+        <h3>Bimbingan Beasiswa</h3>
+        <div class="product-stars">
+          <i data-feather="star" class="star-full"></i>
+          <i data-feather="star" class="star-full"></i>
+          <i data-feather="star" class="star-full"></i>
+          <i data-feather="star" class="star-full"></i>
+          <i data-feather="star"></i>
+        </div>
+        <div class="product-price">IDR 1.250K <span>IDR 2.000K</span></div>
+      </div>
     </div>
+    <div class="product-card">
+      <div class="product-icons">
+        <a href="keranjang.html"><i data-feather="shopping-cart"></i></a>
+        <a href="#" class="item-detail-button" onclick="openModal('modalBusinessPlan')"><i data-feather="eye"></i></a>
+      </div>
+      <div class="product-image">
+        <img src="asset/bpc.jpg" alt="Product 1">
+      </div>
+      <div class="product-content">
+        <h3>Bimbingan Business Plan Competition</h3>
+        <div class="product-stars">
+          <i data-feather="star"></i>
+          <i data-feather="star"></i>
+          <i data-feather="star"></i>
+          <i data-feather="star"></i>
+          <i data-feather="star"></i>
+        </div>
+        <div class="product-price">IDR 1.250K <span>IDR 2.000K</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-
-  </section>
 
 
   <section class="swiper-container">
