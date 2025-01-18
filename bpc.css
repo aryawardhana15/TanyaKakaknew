@@ -581,3 +581,27 @@ section {
 .cta-button:hover .cta-button-icon {
     transform: scale(1.2);
 }
+
+header {
+    background: linear-gradient(to right, #0A4C9C, #1D7AD4);
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-logo img {
+    max-height: 40px; /* Atur tinggi maksimum logo */
+   
+    transition: transform 0.3s ease;
+  }

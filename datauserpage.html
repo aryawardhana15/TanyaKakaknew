@@ -20,7 +20,7 @@
     }
 
     header {
-      background: #266db8;
+        background: linear-gradient(to right, #0A4C9C, #1D7AD4);
       color: white;
       padding: 1rem 0;
       text-align: center;
@@ -77,10 +77,27 @@
     footer {
       text-align: center;
       padding: 1rem 0;
-      background: #266db8;
+      background: linear-gradient(to right, #0A4C9C, #1D7AD4);
       color: white;
       margin-top: 2rem;
     }
+
+    .navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.navbar-logo img {
+  max-height: 40px; /* Atur tinggi maksimum logo */
+ 
+  transition: transform 0.3s ease;
+}
 
     .btn-edit {
       display: inline-block;
@@ -102,7 +119,9 @@
 </head>
 <body>
   <header>
-    <h1>TanyaKakak</h1>
+    <a href="#" class="navbar-logo">
+        <img src="asset/logotanyakakak.png" alt="logo" class="">TanyaKakak
+      </a>
   </header>
 
   <div class="container">
