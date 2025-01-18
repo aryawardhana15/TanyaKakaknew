@@ -1,0 +1,188 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e6f1fb, #bfdff5);
+    color: #333;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #1c449b;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .navbar .nav-links li a:hover {
+    color: #bfdff5;
+  }
+  
+  /* Profile Section */
+  .profile-section {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-header h1 {
+    font-size: 2rem;
+    color: #1c449b;
+  }
+  
+  .profile-header p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-card {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f0f8ff, #d9e9ff);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #1c449b;
+  }
+  
+  .profile-details {
+    text-align: left;
+  }
+  
+  .profile-details h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #1c449b;
+  }
+  
+  .profile-details p {
+    margin: 8px 0;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .profile-details i {
+    color: #1c449b;
+  }
+  
+  .profile-actions {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .btn-edit {
+    background-color: #ffc107;
+    color: white;
+  }
+  
+  .btn-edit:hover {
+    background-color: #e0a800;
+  }
+  
+  .btn-logout {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .btn-logout:hover {
+    background-color: #b02a37;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #1c449b;
+    color: white;
+    margin-top: 30px;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .profile-card {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .profile-details {
+      text-align: center;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .btn {
+      width: 100%;
+      font-size: 1rem;
+    }
+  
+    .profile-details h2 {
+      font-size: 1.5rem;
+    }
+  }
+  

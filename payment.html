@@ -36,29 +36,40 @@
 
       <button type="submit" class="pay-button">Konfirmasi</button>
     </form>
-
-    <div id="message" style="display: none; margin-top: 20px;"></div>
   </div>
 
   <script>
     document.getElementById("payment-form").addEventListener("submit", async function (e) {
       e.preventDefault();
 
-      const formData = new FormData(this);
-      const response = await fetch("/submit-payment", {
-        method: "POST",
-        body: formData,
-      });
+      // Validasi tambahan
+      const email = document.getElementById("email").value.trim();
+      const fileInput = document.getElementById("payment-proof");
+      if (!email.includes("@") || !email.includes(".")) {
+        alert("Email tidak valid. Silakan masukkan email yang benar.");
+        return;
+      }
+      if (fileInput.files.length === 0) {
+        alert("Harap unggah bukti pembayaran.");
+        return;
+      }
 
-      const message = document.getElementById("message");
-      if (response.ok) {
-        message.style.display = "block";
-        message.style.color = "green";
-        message.innerText = "Konfirmasi pembayaran berhasil! Email akan dikirimkan ke alamat Anda.";
-      } else {
-        message.style.display = "block";
-        message.style.color = "red";
-        message.innerText = "Terjadi kesalahan. Silakan coba lagi.";
+      // Kirim data ke server
+      const formData = new FormData(this);
+      try {
+        const response = await fetch("/submit-payment", {
+          method: "POST",
+          body: formData,
+        });
+
+        if (response.ok) {
+          alert("Pembayaran terverifikasi, silahkan cek email Anda untuk mendapatkan akses link pembelajaran.");
+        } else {
+          const errorData = await response.json(); // Opsional, jika server mengirim pesan error
+          alert(`Terjadi kesalahan: ${errorData.message || "Silakan coba lagi."}`);
+        }
+      } catch (error) {
+        alert("Gagal menghubungi server. Silakan periksa koneksi internet Anda dan coba lagi.");
       }
     });
   </script>

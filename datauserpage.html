@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biodata Pengguna | Tanya Kakak</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background: #266db8;
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    .profile-header h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: #266db8;
+    }
+
+    .profile-header p {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .profile-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .profile-content div {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      background: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      transition: 0.3s ease;
+    }
+
+    .profile-content div:hover {
+      background: #eef6ff;
+      border-color: #b0d4f1;
+    }
+
+    .profile-content div i {
+      margin-right: 1rem;
+      font-size: 1.2rem;
+      color: #266db8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background: #266db8;
+      color: white;
+      margin-top: 2rem;
+    }
+
+    .btn-edit {
+      display: inline-block;
+      margin: 1rem auto 0;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      color: white;
+      background: #3ebf8c;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn-edit:hover {
+      background: #2fa377;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TanyaKakak</h1>
+  </header>
+
+  <div class="container">
+    <div class="profile-header">
+      <h1>Profil Pengguna</h1>
+      <p> Berikut adalah data pribadi Anda.</p>
+    </div>
+
+    <div class="profile-content">
+      <div><i class="fas fa-envelope"></i> - </div>
+      <div><i class="fas fa-phone-alt"></i>-</div>
+      <div><i class="fas fa-map-marker-alt"></i> -</div>
+      <div><i class="fas fa-graduation-cap"></i>-</div>
+      <div><i class="fas fa-calendar"></i>-</div>
+    </div>
+
+    <a href="index.html" class="btn-edit" style="padding-block: 0.5rem;"><i class="fas fa-arrow-left"></i> Kembali</a>
+   <a href="Signinpage.html" class="btn-edit" style="padding-block: 0.5rem;"><i class="fas fa-edit"></i> Edit Profil</a>
+ 
+  </div>
+
+  <footer>
+    <p>© 2025 Tanya Kakak. All rights reserved.</p>
+  </footer>
+</body>
+</html>
