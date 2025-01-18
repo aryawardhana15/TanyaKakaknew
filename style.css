@@ -1056,12 +1056,14 @@ background-image: url("https://www.transparenttextures.com/patterns/corrugation.
   @media screen and (max-width: 768px) {
     .blog-list {
       flex-direction: column; /* Mengatur elemen menjadi vertikal */
-     gap: 50px;
+      gap: 50px;
+      
     }
   
     .blog-card {
       width: 100%; /* Kartu memenuhi lebar penuh */
       height: 100%; /* Tinggi kartu 100% */
+      margin-top: 30px;
 
     }
   }
