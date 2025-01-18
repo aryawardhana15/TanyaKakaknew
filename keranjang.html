@@ -143,16 +143,40 @@
         <img src="asset/minibootcamp.jpeg" alt="Bimbingan PKM K" class="product-img">
         <p><strong>Bimbingan PKM K</strong></p>
         <p>Rp1.240.000</p>
-        <button class="add-to-cart" style="margin-top: 20px;">Tambah ke Keranjang</button>
+        <button class="add-to-cart">Tambah ke Keranjang</button>
       </div>
       <div class="product" data-id="5" data-name="Bimbingan Beasiswa" data-price="1240000">
         <img src="asset/beasiswa.jpg" alt="Bimbingan Beasiswa" class="product-img">
         <p><strong>Bimbingan Beasiswa</strong></p>
         <p>Rp1.240.000</p>
-        <button class="add-to-cart" style="margin-top: 20px;">Tambah ke Keranjang</button>
+        <button class="add-to-cart">Tambah ke Keranjang</button>
+      </div>
+      <div class="product" data-id="6" data-name="MENJADI JUARA BISNIS" data-price="50000">
+        <img src="asset/seminar bisnis (3).jpeg" alt="MENJADI JUARA BISNIS" class="product-img">
+        <p><strong>MENJADI JUARA BISNIS</strong></p>
+        <p>Rp50.000</p>
+        <button class="add-to-cart">Tambah ke Keranjang</button>
+      </div>
+      <div class="product" data-id="7" data-name="UNGGUL MENULIS ESSAY" data-price="50000">
+        <img src="asset/seminar essay (2).jpeg" alt="UNGGUL MENULIS ESSAY" class="product-img">
+        <p><strong>UNGGUL MENULIS ESSAY</strong></p>
+        <p>Rp50.000</p>
+        <button class="add-to-cart">Tambah ke Keranjang</button>
+      </div>
+      <div class="product" data-id="8" data-name="TIPS MENANG PKM-K 2025" data-price="50000">
+        <img src="asset/seminar PKM(1).jpeg" alt="TIPS MENANG PKM-K 2025" class="product-img">
+        <p><strong>TIPS MENANG PKM-K 2025</strong></p>
+        <p>Rp50.000</p>
+        <button class="add-to-cart">Tambah ke Keranjang</button>
+      </div>
+      <div class="product" data-id="9" data-name="TRICK MENDAPAT BEASISWA" data-price="50000">
+        <img src="asset/seminar beasiswa (4).jpeg" alt="TRICK MENDAPAT BEASISWA" class="product-img">
+        <p><strong>TRICK MENDAPAT BEASISWA</strong></p>
+        <p>Rp50.000</p>
+        <button class="add-to-cart">Tambah ke Keranjang</button>
       </div>
     </div>
-    
+
     <h1>Keranjang</h1>
     <div id="cart">
       <table class="cart-table">
@@ -173,84 +197,90 @@
       </table>
     </div>
     <button id="go-to-order" style="margin-top: 20px;">Lanjut ke Pesanan</button>
-    </div>
+  </div>
 
-    
-    <div class="footer">
-      &copy; 2025 TanyaKakak - All rights reserved.
-    </div>
-    
-    <script>const cart = [];
+  <div class="footer">
+    &copy; 2025 TanyaKakak - All rights reserved.
+  </div>
+<script>
+const cart = [];
 
-        document.querySelectorAll('.add-to-cart').forEach(button => {
-          button.addEventListener('click', function () {
-            const product = this.parentElement;
-            const id = product.getAttribute('data-id');
-            const name = product.getAttribute('data-name');
-            const price = parseInt(product.getAttribute('data-price')); // Harga sudah berbentuk angka
-    
-            const existingProduct = cart.find(item => item.id === id);
-    
-            if (existingProduct) {
-              existingProduct.quantity += 1;
-              existingProduct.total = existingProduct.quantity * existingProduct.price;
-            } else {
-              cart.push({ id, name, price, quantity: 1, total: price });
-            }
-    
-            renderCart();
-          });
-        });
-    
-        function renderCart() {
-          const cartItems = document.getElementById('cart-items');
-          cartItems.innerHTML = '';
-    
-          let totalPrice = 0; // Variabel untuk menyimpan total harga seluruh keranjang
-    
-          if (cart.length === 0) {
-            cartItems.innerHTML = '<tr><td colspan="5">Keranjang kosong</td></tr>';
-            sessionStorage.setItem('totalPrice', 0); // Set total harga ke 0 jika keranjang kosong
-            return;
-          }
-    
-          cart.forEach(item => {
-            totalPrice += item.total; // Tambahkan harga total setiap item ke total harga
-            const row = document.createElement('tr');
-    
-            row.innerHTML = `
-              <td>${item.name}</td>
-              <td>Rp${item.price.toLocaleString()}</td>
-              <td>${item.quantity}</td>
-              <td>Rp${item.total.toLocaleString()}</td>
-              <td><button class="remove-from-cart" data-id="${item.id}">Hapus</button></td>
-            `;
-    
-            row.querySelector('.remove-from-cart').addEventListener('click', function () {
-              const id = this.getAttribute('data-id');
-              const index = cart.findIndex(item => item.id === id);
-    
-              if (index !== -1) {
-                cart.splice(index, 1);
-              }
-    
-              renderCart();
-            });
-    
-            cartItems.appendChild(row);
-          });
-    
-          sessionStorage.setItem('totalPrice', totalPrice); // Simpan total harga ke Session Storage
-        }
-    
-        // Redirect ke halaman order
-        document.getElementById('go-to-order').addEventListener('click', function () {
-          location.href = 'orderpage.html'; // Redirect ke halaman order
-        });
+// Tambahkan event listener untuk setiap tombol "Tambah ke Keranjang"
+document.querySelectorAll('.add-to-cart').forEach(button => {
+  button.addEventListener('click', function () {
+    const product = this.parentElement; // Ambil elemen parent dari tombol
+    const id = product.getAttribute('data-id'); // Ambil ID produk
+    const name = product.getAttribute('data-name'); // Ambil nama produk
+    const price = parseInt(product.getAttribute('data-price')); // Ambil harga produk (angka)
 
+    // Cek apakah produk sudah ada di keranjang
+    const existingProduct = cart.find(item => item.id === id);
 
+    if (existingProduct) {
+      // Jika produk sudah ada, tambahkan kuantitas
+      existingProduct.quantity += 1;
+      existingProduct.total = existingProduct.quantity * existingProduct.price;
+    } else {
+      // Jika produk belum ada, tambahkan ke keranjang
+      cart.push({ id, name, price, quantity: 1, total: price });
+    }
 
-    </script>
+    renderCart(); // Update tampilan keranjang
+  });
+});
+
+// Fungsi untuk menampilkan isi keranjang
+function renderCart() {
+  const cartItems = document.getElementById('cart-items');
+  cartItems.innerHTML = ''; // Kosongkan isi keranjang
+
+  let totalPrice = 0; // Variabel untuk menyimpan total harga
+
+  if (cart.length === 0) {
+    // Jika keranjang kosong
+    cartItems.innerHTML = '<tr><td colspan="5">Keranjang kosong</td></tr>';
+    sessionStorage.setItem('totalPrice', 0); // Set total harga ke 0
+    return;
+  }
+
+  // Tampilkan setiap item di keranjang
+  cart.forEach(item => {
+    totalPrice += item.total; // Tambahkan harga total item ke total keseluruhan
+    const row = document.createElement('tr');
+
+    row.innerHTML = `
+      <td>${item.name}</td>
+      <td>Rp${item.price.toLocaleString()}</td>
+      <td>${item.quantity}</td>
+      <td>Rp${item.total.toLocaleString()}</td>
+      <td><button class="remove-from-cart" data-id="${item.id}">Hapus</button></td>
+    `;
+
+    // Tambahkan event listener untuk tombol "Hapus"
+    row.querySelector('.remove-from-cart').addEventListener('click', function () {
+      const id = this.getAttribute('data-id'); // Ambil ID item
+      const index = cart.findIndex(item => item.id === id); // Cari indeks item di keranjang
+
+      if (index !== -1) {
+        cart.splice(index, 1); // Hapus item dari keranjang
+      }
+
+      renderCart(); // Update tampilan keranjang
+    });
+
+    cartItems.appendChild(row); // Tambahkan baris ke tabel
+  });
+
+  sessionStorage.setItem('totalPrice', totalPrice); // Simpan total harga ke Session Storage
+}
+
+// Redirect ke halaman order
+document.getElementById('go-to-order').addEventListener('click', function () {
+  location.href = 'orderpage.html'; // Redirect ke halaman pesanan
+});
+
+</script>
+
     
 </body>
 </html>
